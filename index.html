@@ -40,6 +40,20 @@ html{scroll-behavior:smooth;}
 @keyframes shimmer{0%{background-position:-1000px 0;}100%{background-position:1000px 0;}}
 @keyframes floatY{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
 @keyframes glow{0%,100%{box-shadow:inset 0 0 20px rgba(201,169,110,0.08);}50%{box-shadow:inset 0 0 30px rgba(201,169,110,0.15);}}
+@keyframes fadeInScale{from{opacity:0;transform:scaleX(0);}to{opacity:1;transform:scaleX(1);}}
+@keyframes sectionFadeIn{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+
+/* SCROLL ANIMATIONS */
+.section-fade-in{animation:sectionFadeIn 0.8s ease-out forwards;opacity:0;}
+.section-visible{opacity:1;}
+
+.divider-fade{animation:fadeInScale 0.6s ease-out forwards;opacity:0;transform-origin:center;}
+.divider-visible{opacity:1;}
+
+.reveal.visible{opacity:1;}
+
+/* SEÇÃO ICONS */
+.section-icon{width:80px;height:80px;color:var(--accent-gold);opacity:0;animation:fadeUp 0.8s ease-out 0.2s forwards;margin:0 auto 2rem;display:block;}
 
 body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.8;font-size:16px;overflow-x:hidden;padding-bottom:60px;-webkit-font-smoothing:antialiased;}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px;}
@@ -455,9 +469,36 @@ img,video{max-width:100%;height:auto;}
 
 <!-- SOBRE -->
 <section id="sobre" aria-labelledby="sobre-title">
+  <div class="divider-gold" aria-hidden="true" style="margin-top:0;"></div>
   <div class="section-label" aria-hidden="true">01 / Sobre</div>
   <div class="about-grid">
     <div class="about-text">
+      <!-- Ícone de Building/Construction -->
+      <svg class="section-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Estrutura principal do prédio -->
+          <rect x="30" y="35" width="60" height="75" />
+          <!-- Divisões verticais -->
+          <line x1="50" y1="35" x2="50" y2="110" />
+          <line x1="70" y1="35" x2="70" y2="110" />
+          <!-- Janelas superior -->
+          <rect x="35" y="45" width="10" height="10" />
+          <rect x="55" y="45" width="10" height="10" />
+          <rect x="75" y="45" width="10" height="10" />
+          <!-- Janelas meio -->
+          <rect x="35" y="65" width="10" height="10" />
+          <rect x="55" y="65" width="10" height="10" />
+          <rect x="75" y="65" width="10" height="10" />
+          <!-- Janelas inferior -->
+          <rect x="35" y="85" width="10" height="10" />
+          <rect x="55" y="85" width="10" height="10" />
+          <rect x="75" y="85" width="10" height="10" />
+          <!-- Porta -->
+          <rect x="55" y="100" width="10" height="10" />
+          <!-- Telhado -->
+          <polygon points="30,35 60,15 90,35" />
+        </g>
+      </svg>
       <h2 class="section-title" id="sobre-title">Product, Design <em>&</em> Technology.</h2>
       <p><strong>PT-BR:</strong> Design, produto e tecnologia com propósito — especializada em saúde mental e tecnologias para neurodivergência. No cruzamento entre estratégia visual, gestão de produto e construção de ferramentas digitais, há mais de 15 anos.</p>
       <p><strong>EN:</strong> Product Manager, Designer & Builder with 15+ years in product strategy, UX/UI design, and full-stack development. I've built 8 proprietary applications solo—from conception through deployment. Recently completed ABA certification (40-hour intensive, April 2026); currently exploring how behavioral principles apply to product design and user experience. Learning Psychology at Faculdade UNA. Fluent in Portuguese & English. Based in Brazil, open to remote opportunities.</p>
@@ -468,8 +509,23 @@ img,video{max-width:100%;height:auto;}
 
 <!-- PROJETOS -->
 <section id="projetos" class="projects-section" aria-labelledby="projetos-title">
+  <div class="divider-gold" aria-hidden="true"></div>
   <div class="projects-header">
     <div class="section-label" aria-hidden="true">02 / Projetos</div>
+    <!-- Ícone de Layers/Apps -->
+    <svg class="section-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="margin-bottom:1rem;">
+      <g stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Camada 1 -->
+        <rect x="25" y="50" width="70" height="35" rx="3" />
+        <polyline points="25,65 60,50 95,65" />
+        <!-- Camada 2 -->
+        <rect x="30" y="60" width="70" height="35" rx="3" opacity="0.6" />
+        <!-- Camada 3 -->
+        <rect x="35" y="70" width="70" height="35" rx="3" opacity="0.3" />
+        <!-- Indicador de profundidade -->
+        <line x1="60" y1="50" x2="60" y2="105" stroke-dasharray="2,2" opacity="0.4" />
+      </g>
+    </svg>
     <h2 class="section-title" id="projetos-title">Projetos que <em>criei</em>.</h2>
     <p class="projects-intro">Oito projetos proprietários criados por mim do zero — concepção, design, produto e desenvolvimento. Obra Certa disponível por assinatura; Neuro Lens, Convergir, Oráculo Pessoal, BIA, Operação Horizonte e The Fault Line com acesso gratuito ou demo. SensoryShield em fase de captação.</p>
   </div>
@@ -784,7 +840,27 @@ img,video{max-width:100%;height:auto;}
 
 <!-- EXPERIÊNCIA -->
 <section id="experiencia" aria-labelledby="exp-title">
+  <div class="divider-gold" aria-hidden="true"></div>
   <div class="section-label" aria-hidden="true">03 / Experiência</div>
+  <!-- Ícone de Timeline/Progression -->
+  <svg class="section-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Linha central -->
+      <line x1="60" y1="20" x2="60" y2="100" />
+      <!-- Ponto 1 -->
+      <circle cx="60" cy="30" r="6" fill="currentColor" />
+      <line x1="50" y1="30" x2="40" y2="30" />
+      <!-- Ponto 2 -->
+      <circle cx="60" cy="55" r="5" />
+      <line x1="70" y1="55" x2="80" y2="55" />
+      <!-- Ponto 3 -->
+      <circle cx="60" cy="80" r="6" fill="currentColor" />
+      <line x1="50" y1="80" x2="40" y2="80" />
+      <!-- Decoração conectora -->
+      <line x1="40" y1="30" x2="40" y2="55" stroke-dasharray="2,2" opacity="0.3" />
+      <line x1="80" y1="55" x2="80" y2="80" stroke-dasharray="2,2" opacity="0.3" />
+    </g>
+  </svg>
   <h2 class="section-title" id="exp-title">Trajetória em <em>produto</em><br>e design.</h2>
   <div class="exp-list">
 
@@ -953,6 +1029,24 @@ img,video{max-width:100%;height:auto;}
 
   <div class="form-grid">
     <div>
+      <div class="divider-gold" aria-hidden="true" style="margin-bottom:2rem;"></div>
+      <!-- Ícone de Certificado -->
+      <svg class="section-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="margin-bottom:1.5rem;width:60px;height:60px;">
+        <g stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Fita topo esquerda -->
+          <path d="M 30 25 Q 20 25 20 35 L 20 50" />
+          <!-- Fita topo direita -->
+          <path d="M 90 25 Q 100 25 100 35 L 100 50" />
+          <!-- Certificado -->
+          <rect x="30" y="25" width="60" height="60" rx="2" />
+          <!-- Decoração interna -->
+          <circle cx="60" cy="40" r="8" />
+          <line x1="40" y1="55" x2="80" y2="55" />
+          <line x1="45" y1="65" x2="75" y2="65" />
+          <!-- Estrela -->
+          <polygon points="60,75 63,82 71,82 65,87 68,94 60,89 52,94 55,87 49,82 57,82" />
+        </g>
+      </svg>
       <div class="section-label" style="margin-bottom:1.5rem;" aria-hidden="true">Formação</div>
       <div class="cert-row"><span class="cert-name">Psicologia <span class="em-tag">EM BREVE</span></span></div>
       <div class="cert-row"><span class="cert-name">Análise do Comportamento Aplicada (ABA) <span class="em-tag">EM CURSO</span></span></div>
@@ -1055,6 +1149,46 @@ document.querySelectorAll('.reveal').forEach((el,i)=>{
         startAuto();
       });
     }
+  });
+})();
+
+// PARALLAX & SCROLL EFFECTS
+(function(){
+  // Parallax na foto do hero
+  const heroPhoto = document.querySelector('.hero-photo');
+  if(heroPhoto) {
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      heroPhoto.style.transform = `translateY(${scrollY * 0.3}px)`;
+    });
+  }
+
+  // Fade-in seções ao scroll
+  const sectionsObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting) {
+        e.target.classList.add('section-visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('section').forEach(section => {
+    section.classList.add('section-fade-in');
+    sectionsObs.observe(section);
+  });
+
+  // Divisores de ouro — scale-in animation
+  const divisorsObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting) {
+        e.target.classList.add('divider-visible');
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.divider-gold').forEach(div => {
+    div.classList.add('divider-fade');
+    divisorsObs.observe(div);
   });
 })();
 </script>
