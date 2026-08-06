@@ -53,9 +53,9 @@ html{scroll-behavior:smooth;}
 .reveal.visible{opacity:1;}
 
 /* SEÇÃO ICONS */
-.section-icon{width:80px;height:80px;color:var(--accent-gold);opacity:0;animation:fadeUp 0.8s ease-out 0.2s forwards;margin:0 auto 2rem;display:block;}
+.section-icon{width:120px;height:120px;color:var(--accent-gold);opacity:0;animation:fadeUp 0.8s ease-out 0.2s forwards;margin:0 auto 2rem;display:block;}
 
-body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.8;font-size:16px;overflow-x:hidden;padding-bottom:60px;-webkit-font-smoothing:antialiased;}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:2.0;font-size:18px;overflow-x:hidden;padding-bottom:60px;-webkit-font-smoothing:antialiased;}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px;}
 .skip-link{position:absolute;top:-100%;left:1rem;background:var(--accent);color:var(--bg);padding:.5rem 1rem;font-family:var(--mono);font-size:12px;border-radius:var(--r-sm);text-decoration:none;z-index:9999;transition:top .2s;}
 .skip-link:focus{top:1rem;}
@@ -70,8 +70,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 /* HERO */
 .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;border-bottom:1px solid var(--border-gold);overflow:hidden;}
 .hero-photo{position:absolute;top:0;right:0;bottom:0;width:48%;max-width:540px;z-index:1;}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;clip-path:polygon(0 0, 100% 5%, 98% 100%, 0 95%);filter:brightness(0.92);}
-.hero-photo-fade{position:absolute;inset:0;background:linear-gradient(to right,var(--bg) 0%,rgba(10,10,8,.85) 50%,rgba(10,10,8,.15) 100%);z-index:0;}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;clip-path:polygon(0 0, 100% 5%, 98% 100%, 0 95%);filter:brightness(1.0);}
+.hero-photo-fade{position:absolute;inset:0;background:linear-gradient(to right,var(--bg) 0%,rgba(10,10,8,.6) 50%,rgba(10,10,8,.05) 100%);z-index:0;}
 .hero-content{position:relative;z-index:2;padding:9rem 3rem 5rem;max-width:580px;}
 .hero-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--accent-gold);text-transform:uppercase;margin-bottom:2rem;opacity:0;animation:fadeUp .7s .2s ease forwards;font-weight:500;}
 .hero-name{font-family:var(--serif);font-size:clamp(3.5rem,8vw,8rem);line-height:.95;font-weight:400;letter-spacing:-.01em;opacity:0;animation:fadeUp .7s .4s ease forwards;color:var(--text);}
@@ -500,7 +500,7 @@ img,video{max-width:100%;height:auto;}
         </g>
       </svg>
       <h2 class="section-title" id="sobre-title">Product, Design <em>&</em> Technology.</h2>
-      <p><strong>PT-BR:</strong> Design, produto e tecnologia com propósito — especializada em saúde mental e tecnologias para neurodivergência. No cruzamento entre estratégia visual, gestão de produto e construção de ferramentas digitais, há mais de 15 anos.</p>
+      <p><strong>PT-BR:</strong> Product Manager, Designer & Builder com 15+ anos em estratégia de produto, design e desenvolvimento de soluções digitais. Criei 8 aplicações proprietárias do zero. Certificada em ABA (40h, Abr 2026); atualmente explorando como princípios comportamentais se aplicam a design de produto. Estudando Psicologia na Faculdade UNA.</p>
       <p><strong>EN:</strong> Product Manager, Designer & Builder with 15+ years in product strategy, UX/UI design, and full-stack development. I've built 8 proprietary applications solo—from conception through deployment. Recently completed ABA certification (40-hour intensive, April 2026); currently exploring how behavioral principles apply to product design and user experience. Learning Psychology at Faculdade UNA. Fluent in Portuguese & English. Based in Brazil, open to remote opportunities.</p>
       <p><strong>Skills:</strong> Product Strategy & Roadmapping, UX/UI Design, Instructional Design, Brand Development, and Full-Stack Product Development using AI as core toolkit. I learned technical stacks (GitHub, Next.js, Supabase, Vercel) independently via AI-assisted development.</p>
     </div>
@@ -544,8 +544,41 @@ img,video{max-width:100%;height:auto;}
   </div>
   <div class="projects-gallery has-7" role="region" aria-label="Galeria de apps">
 
-  <!-- 01 OBRA CERTA -->
-  <article class="project-item reveal" aria-labelledby="proj1-title">
+<article class="project-item reveal" aria-labelledby="proj7-title">
+    <div>
+      <div class="project-index" aria-hidden="true">07</div>
+      <h3 class="project-title" id="proj7-title">SensoryShield <span class="project-badge badge-cap">Em captação</span></h3>
+      <div class="project-type">Moda · Sensorialidade · Inclusão · Wearable tech</div>
+      <p class="project-desc">Marca de roupas para pessoas com alta sensibilidade sensorial, em fase de captação de investimentos. Duplo capuz bloqueador de luz, almofadas acústicas quilted, fechamento magnético silencioso, mangas extra-longas com thumbholes e costura flatlock. Proteção sensorial real com estética de luxo. Modal 70% + Microfibra 30%.</p>
+      <div class="project-tags"><span class="tag">Moda sensorial</span><span class="tag">Wearable tech</span><span class="tag">Inclusão</span><span class="tag">TEA / TDAH</span><span class="tag">Investimento</span></div>
+      <a href="https://wa.me/5534999441161?text=Ol%C3%A1%2C+tenho+interesse+em+saber+mais+sobre+o+SensoryShield" class="project-cta" target="_blank" rel="noopener">Falar sobre investimento ↗</a>
+      
+    </div>
+    <div class="project-mockup" aria-hidden="true">
+      <div class="mockup-wrap">
+        <div class="device">
+          <div class="device-screen">
+            <div class="device-island" aria-hidden="true"></div>
+            <div class="device-statusbar" aria-hidden="true">
+              <span class="device-statusbar-time">9:41</span>
+              <span class="device-statusbar-icons">
+                <svg width="11" height="7" viewBox="0 0 17 11" fill="none"><rect x="0" y="6" width="3" height="5" rx="1" fill="#fff"/><rect x="4.7" y="4" width="3" height="7" rx="1" fill="#fff"/><rect x="9.4" y="2" width="3" height="9" rx="1" fill="#fff"/><rect x="14.1" y="0" width="3" height="11" rx="1" fill="#fff"/></svg>
+                <svg width="11" height="8" viewBox="0 0 16 11" fill="none"><path d="M8 2.5c2.2 0 4.2 0.8 5.7 2.2l1.4-1.4C13.3 1.5 10.7 0.5 8 0.5S2.7 1.5 0.9 3.3l1.4 1.4C3.8 3.3 5.8 2.5 8 2.5zM8 6c1.2 0 2.3 0.4 3.1 1.2l1.4-1.4C11.3 4.7 9.7 4 8 4S4.7 4.7 3.5 5.8l1.4 1.4C5.7 6.4 6.8 6 8 6zM8 9.5c0.7 0 1.4 0.3 1.9 0.8L8 12.2 6.1 10.3C6.6 9.8 7.3 9.5 8 9.5z" fill="#fff"/></svg>
+                <svg width="16" height="8" viewBox="0 0 25 11" fill="none"><rect x="0.5" y="0.5" width="21" height="10" rx="2.5" stroke="#fff" stroke-opacity="0.5" fill="none"/><rect x="2" y="2" width="18" height="7" rx="1" fill="#fff"/><rect x="22.5" y="3.5" width="1.5" height="4" rx="0.7" fill="#fff" fill-opacity="0.5"/></svg>
+              </span>
+            </div>
+            <div class="device-slides" id="ss-slides" style="overflow:hidden">
+              <div class="device-slide active"><img src="assets/sensoryshield_1.webp" alt="" loading="eager"/></div>
+              <div class="device-slide"><img src="assets/sensoryshield_2.webp" alt="" loading="eager"/></div>
+              <div class="device-slide"><img src="assets/sensoryshield_3.webp" alt="" loading="eager"/></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+<article class="project-item reveal" aria-labelledby="proj1-title">
     <div>
       <div class="project-index" aria-hidden="true">01</div>
       <h3 class="project-title" id="proj1-title">Obra Certa <span class="project-badge badge-sub">Assinatura</span></h3>
@@ -580,8 +613,7 @@ img,video{max-width:100%;height:auto;}
     </div>
   </article>
 
-  <!-- 02 NEURO LENS -->
-  <article class="project-item reverse reveal" aria-labelledby="proj2-title">
+<article class="project-item reverse reveal" aria-labelledby="proj2-title">
     <div>
       <div class="project-index" aria-hidden="true">02</div>
       <h3 class="project-title" id="proj2-title">Neuro Lens <span class="project-badge badge-free">Gratuito</span></h3>
@@ -616,15 +648,14 @@ img,video{max-width:100%;height:auto;}
     </div>
   </article>
 
-  <!-- 03 CONVERGIR (NOVO) -->
-  <article class="project-item reveal" aria-labelledby="proj3-title">
+<article class="project-item reverse reveal" aria-labelledby="proj6-title">
     <div>
-      <div class="project-index" aria-hidden="true">03</div>
-      <h3 class="project-title" id="proj3-title">Convergir <span class="project-badge badge-demo">Demo</span></h3>
-      <div class="project-type">Narrativa interativa · Ficção científica romântica</div>
-      <p class="project-desc">Narrativa interativa com mecânicas imersivas de jogo: ficção científica romântica em que o leitor sintoniza frequências, atravessa cenários e acompanha a história de Lia e Bento até o ponto de convergência. Trilha sonora, ilustrações originais e ritmo próprio em cada capítulo.</p>
-      <div class="project-tags"><span class="tag">Narrativa interativa</span><span class="tag">Game design</span><span class="tag">Ficção científica</span><span class="tag">Trilha original</span></div>
-      <a href="https://jessblock.github.io/convergir/" target="_blank" rel="noopener noreferrer" class="project-cta">Jogar ↗</a>
+      <div class="project-index" aria-hidden="true">06</div>
+      <h3 class="project-title" id="proj6-title">Operação Horizonte <span class="project-badge badge-demo">Demo</span></h3>
+      <div class="project-type">Gamificação · Neurodivergência · Família</div>
+      <p class="project-desc">App de gamificação de rotina para crianças neurodivergentes: sistema de missões diárias, laboratório criativo, conquistas, XP e progressão por ranking. Painel de comando para o responsável configurar missões, aprovar entregas e acompanhar o progresso. Desenvolvido para tornar a rotina estruturada em aventura.</p>
+      <div class="project-tags"><span class="tag">Gamificação</span><span class="tag">TEA / TDAH</span><span class="tag">Rotina</span><span class="tag">Criança</span><span class="tag">PWA</span></div>
+      <a href="https://horizonte-tau.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-cta">Acessar app ↗</a>
       
     </div>
     <div class="project-mockup" aria-hidden="true">
@@ -640,12 +671,12 @@ img,video{max-width:100%;height:auto;}
                 <svg width="16" height="8" viewBox="0 0 25 11" fill="none"><rect x="0.5" y="0.5" width="21" height="10" rx="2.5" stroke="#fff" stroke-opacity="0.5" fill="none"/><rect x="2" y="2" width="18" height="7" rx="1" fill="#fff"/><rect x="22.5" y="3.5" width="1.5" height="4" rx="0.7" fill="#fff" fill-opacity="0.5"/></svg>
               </span>
             </div>
-            <div class="device-slides" id="convergir-slides">
-              <div class="device-slide active"><img src="assets/convergir_1.webp" alt="" loading="lazy"/></div>
-              <div class="device-slide"><img src="assets/convergir_2.webp" alt="" loading="lazy"/></div>
-              <div class="device-slide"><img src="assets/convergir_3.webp" alt="" loading="lazy"/></div>
-              <div class="device-slide"><img src="assets/convergir_4.webp" alt="" loading="lazy"/></div>
-              <div class="device-slide"><img src="assets/convergir_5.webp" alt="" loading="lazy"/></div>
+            <div class="device-slides" id="horizonte-slides">
+              <div class="device-slide active"><img src="assets/horizonte_1.webp" alt="" loading="lazy"/></div>
+              <div class="device-slide"><img src="assets/horizonte_2.webp" alt="" loading="lazy"/></div>
+              <div class="device-slide"><img src="assets/horizonte_3.webp" alt="" loading="lazy"/></div>
+              <div class="device-slide"><img src="assets/horizonte_4.webp" alt="" loading="lazy"/></div>
+              <div class="device-slide"><img src="assets/horizonte_5.webp" alt="" loading="lazy"/></div>
             </div>
           </div>
         </div>
@@ -653,8 +684,7 @@ img,video{max-width:100%;height:auto;}
     </div>
   </article>
 
-  <!-- 04 ORACULO -->
-  <article class="project-item reverse reveal" aria-labelledby="proj4-title">
+<article class="project-item reverse reveal" aria-labelledby="proj4-title">
     <div>
       <div class="project-index" aria-hidden="true">04</div>
       <h3 class="project-title" id="proj4-title">Oráculo Pessoal <span class="project-badge badge-free">Gratuito</span></h3>
@@ -691,7 +721,7 @@ img,video{max-width:100%;height:auto;}
     </div>
   </article>
 
-  <article class="project-item reveal" aria-labelledby="proj5-title">
+<article class="project-item reveal" aria-labelledby="proj5-title">
     <div>
       <div class="project-index" aria-hidden="true">05</div>
       <h3 class="project-title" id="proj5-title">BIA <span class="project-badge badge-demo">Demo</span></h3>
@@ -727,14 +757,14 @@ img,video{max-width:100%;height:auto;}
     </div>
   </article>
 
-  <article class="project-item reverse reveal" aria-labelledby="proj6-title">
+<article class="project-item reveal" aria-labelledby="proj3-title">
     <div>
-      <div class="project-index" aria-hidden="true">06</div>
-      <h3 class="project-title" id="proj6-title">Operação Horizonte <span class="project-badge badge-demo">Demo</span></h3>
-      <div class="project-type">Gamificação · Neurodivergência · Família</div>
-      <p class="project-desc">App de gamificação de rotina para crianças neurodivergentes: sistema de missões diárias, laboratório criativo, conquistas, XP e progressão por ranking. Painel de comando para o responsável configurar missões, aprovar entregas e acompanhar o progresso. Desenvolvido para tornar a rotina estruturada em aventura.</p>
-      <div class="project-tags"><span class="tag">Gamificação</span><span class="tag">TEA / TDAH</span><span class="tag">Rotina</span><span class="tag">Criança</span><span class="tag">PWA</span></div>
-      <a href="https://horizonte-tau.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-cta">Acessar app ↗</a>
+      <div class="project-index" aria-hidden="true">03</div>
+      <h3 class="project-title" id="proj3-title">Convergir <span class="project-badge badge-demo">Demo</span></h3>
+      <div class="project-type">Narrativa interativa · Ficção científica romântica</div>
+      <p class="project-desc">Narrativa interativa com mecânicas imersivas de jogo: ficção científica romântica em que o leitor sintoniza frequências, atravessa cenários e acompanha a história de Lia e Bento até o ponto de convergência. Trilha sonora, ilustrações originais e ritmo próprio em cada capítulo.</p>
+      <div class="project-tags"><span class="tag">Narrativa interativa</span><span class="tag">Game design</span><span class="tag">Ficção científica</span><span class="tag">Trilha original</span></div>
+      <a href="https://jessblock.github.io/convergir/" target="_blank" rel="noopener noreferrer" class="project-cta">Jogar ↗</a>
       
     </div>
     <div class="project-mockup" aria-hidden="true">
@@ -750,12 +780,12 @@ img,video{max-width:100%;height:auto;}
                 <svg width="16" height="8" viewBox="0 0 25 11" fill="none"><rect x="0.5" y="0.5" width="21" height="10" rx="2.5" stroke="#fff" stroke-opacity="0.5" fill="none"/><rect x="2" y="2" width="18" height="7" rx="1" fill="#fff"/><rect x="22.5" y="3.5" width="1.5" height="4" rx="0.7" fill="#fff" fill-opacity="0.5"/></svg>
               </span>
             </div>
-            <div class="device-slides" id="horizonte-slides">
-              <div class="device-slide active"><img src="assets/horizonte_1.webp" alt="" loading="lazy"/></div>
-              <div class="device-slide"><img src="assets/horizonte_2.webp" alt="" loading="lazy"/></div>
-              <div class="device-slide"><img src="assets/horizonte_3.webp" alt="" loading="lazy"/></div>
-              <div class="device-slide"><img src="assets/horizonte_4.webp" alt="" loading="lazy"/></div>
-              <div class="device-slide"><img src="assets/horizonte_5.webp" alt="" loading="lazy"/></div>
+            <div class="device-slides" id="convergir-slides">
+              <div class="device-slide active"><img src="assets/convergir_1.webp" alt="" loading="lazy"/></div>
+              <div class="device-slide"><img src="assets/convergir_2.webp" alt="" loading="lazy"/></div>
+              <div class="device-slide"><img src="assets/convergir_3.webp" alt="" loading="lazy"/></div>
+              <div class="device-slide"><img src="assets/convergir_4.webp" alt="" loading="lazy"/></div>
+              <div class="device-slide"><img src="assets/convergir_5.webp" alt="" loading="lazy"/></div>
             </div>
           </div>
         </div>
@@ -763,43 +793,7 @@ img,video{max-width:100%;height:auto;}
     </div>
   </article>
 
-  <!-- 07 SENSORYSHIELD -->
-  <article class="project-item reveal" aria-labelledby="proj7-title">
-    <div>
-      <div class="project-index" aria-hidden="true">07</div>
-      <h3 class="project-title" id="proj7-title">SensoryShield <span class="project-badge badge-cap">Em captação</span></h3>
-      <div class="project-type">Moda · Sensorialidade · Inclusão · Wearable tech</div>
-      <p class="project-desc">Marca de roupas para pessoas com alta sensibilidade sensorial, em fase de captação de investimentos. Duplo capuz bloqueador de luz, almofadas acústicas quilted, fechamento magnético silencioso, mangas extra-longas com thumbholes e costura flatlock. Proteção sensorial real com estética de luxo. Modal 70% + Microfibra 30%.</p>
-      <div class="project-tags"><span class="tag">Moda sensorial</span><span class="tag">Wearable tech</span><span class="tag">Inclusão</span><span class="tag">TEA / TDAH</span><span class="tag">Investimento</span></div>
-      <a href="https://wa.me/5534999441161?text=Ol%C3%A1%2C+tenho+interesse+em+saber+mais+sobre+o+SensoryShield" class="project-cta" target="_blank" rel="noopener">Falar sobre investimento ↗</a>
-      
-    </div>
-    <div class="project-mockup" aria-hidden="true">
-      <div class="mockup-wrap">
-        <div class="device">
-          <div class="device-screen">
-            <div class="device-island" aria-hidden="true"></div>
-            <div class="device-statusbar" aria-hidden="true">
-              <span class="device-statusbar-time">9:41</span>
-              <span class="device-statusbar-icons">
-                <svg width="11" height="7" viewBox="0 0 17 11" fill="none"><rect x="0" y="6" width="3" height="5" rx="1" fill="#fff"/><rect x="4.7" y="4" width="3" height="7" rx="1" fill="#fff"/><rect x="9.4" y="2" width="3" height="9" rx="1" fill="#fff"/><rect x="14.1" y="0" width="3" height="11" rx="1" fill="#fff"/></svg>
-                <svg width="11" height="8" viewBox="0 0 16 11" fill="none"><path d="M8 2.5c2.2 0 4.2 0.8 5.7 2.2l1.4-1.4C13.3 1.5 10.7 0.5 8 0.5S2.7 1.5 0.9 3.3l1.4 1.4C3.8 3.3 5.8 2.5 8 2.5zM8 6c1.2 0 2.3 0.4 3.1 1.2l1.4-1.4C11.3 4.7 9.7 4 8 4S4.7 4.7 3.5 5.8l1.4 1.4C5.7 6.4 6.8 6 8 6zM8 9.5c0.7 0 1.4 0.3 1.9 0.8L8 12.2 6.1 10.3C6.6 9.8 7.3 9.5 8 9.5z" fill="#fff"/></svg>
-                <svg width="16" height="8" viewBox="0 0 25 11" fill="none"><rect x="0.5" y="0.5" width="21" height="10" rx="2.5" stroke="#fff" stroke-opacity="0.5" fill="none"/><rect x="2" y="2" width="18" height="7" rx="1" fill="#fff"/><rect x="22.5" y="3.5" width="1.5" height="4" rx="0.7" fill="#fff" fill-opacity="0.5"/></svg>
-              </span>
-            </div>
-            <div class="device-slides" id="ss-slides" style="overflow:hidden">
-              <div class="device-slide active"><img src="assets/sensoryshield_1.webp" alt="" loading="eager"/></div>
-              <div class="device-slide"><img src="assets/sensoryshield_2.webp" alt="" loading="eager"/></div>
-              <div class="device-slide"><img src="assets/sensoryshield_3.webp" alt="" loading="eager"/></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </article>
-
-  <!-- 08 THE FAULT LINE -->
-  <article class="project-item reveal" aria-labelledby="proj8-title">
+<article class="project-item reveal" aria-labelledby="proj8-title">
     <div>
       <div class="project-index" aria-hidden="true">08</div>
       <h3 class="project-title" id="proj8-title">The Fault Line <span class="project-badge badge-free">Gratuito</span></h3>
@@ -834,12 +828,8 @@ img,video{max-width:100%;height:auto;}
       </div>
     </div>
   </article>
-
   </div>
-</section>
-
-<!-- EXPERIÊNCIA -->
-<section id="experiencia" aria-labelledby="exp-title">
+</section><section id="experiencia" aria-labelledby="exp-title">
   <div class="divider-gold" aria-hidden="true"></div>
   <div class="section-label" aria-hidden="true">03 / Experiência</div>
   <!-- Ícone de Timeline/Progression -->
