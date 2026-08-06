@@ -52,8 +52,18 @@ html{scroll-behavior:smooth;}
 
 .reveal.visible{opacity:1;}
 
-/* SEÇÃO ICONS */
-.section-icon{width:120px;height:120px;color:var(--accent-gold);opacity:0;animation:fadeUp 0.8s ease-out 0.2s forwards;margin:0 auto 2rem;display:block;}
+/* LANGUAGE TOGGLE */
+.lang-toggle{display:flex;gap:1rem;position:fixed;top:1rem;right:3rem;z-index:101;background:var(--nav-bg);padding:0.75rem 1.5rem;border:1px solid var(--border-gold);border-radius:var(--r-md);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);}
+.lang-btn{background:transparent;border:none;font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);cursor:pointer;padding:4px 8px;transition:all .2s;border-bottom:2px solid transparent;}
+.lang-btn.active{color:var(--accent-gold);border-bottom-color:var(--accent-gold);font-weight:500;}
+.lang-btn:hover{color:var(--accent-gold);}
+
+.lang-content{display:none;}
+.lang-content.active{display:block;}
+
+@media(max-width:768px){
+  .lang-toggle{top:auto;bottom:52px;right:1.25rem;left:1.25rem;justify-content:center;width:calc(100% - 2.5rem);}
+}
 
 body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:2.0;font-size:18px;overflow-x:hidden;padding-bottom:60px;-webkit-font-smoothing:antialiased;}
 :focus-visible{outline:2px solid var(--accent-gold);outline-offset:3px;border-radius:3px;}
@@ -426,6 +436,12 @@ img,video{max-width:100%;height:auto;}
   </ul>
 </nav>
 
+<!-- LANGUAGE TOGGLE -->
+<div class="lang-toggle" role="group" aria-label="Language selection">
+  <button class="lang-btn active" data-lang="pt" aria-pressed="true">PT</button>
+  <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+</div>
+
 <!-- HERO -->
 <header class="hero" id="main">
   <div class="hero-photo" aria-hidden="true">
@@ -435,7 +451,12 @@ img,video{max-width:100%;height:auto;}
   <div class="hero-content">
     <p class="hero-eyebrow">✦ Product Manager · Designer · Builder</p>
     <h1 class="hero-name">Jessica<br><em>Block.</em></h1>
+    <div class="lang-content active" data-lang="pt">
+    <p class="hero-tagline">Software de intervenção comportamental para crianças neurodivergentes. Produto, design e código.</p>
+  </div>
+  <div class="lang-content" data-lang="en">
     <p class="hero-tagline">Behavioral intervention software for neurodivergent children. Product, design & code.</p>
+  </div>
     <div class="hero-actions">
       <a href="#projetos" class="hero-btn primary">Ver projetos</a>
       <a href="mailto:jessicatwblock@gmail.com" class="hero-btn">Entrar em contato</a>
@@ -499,10 +520,18 @@ img,video{max-width:100%;height:auto;}
           <polygon points="30,35 60,15 90,35" />
         </g>
       </svg>
-      <h2 class="section-title" id="sobre-title">Building <em>Operação Horizonte</em>.</h2>
-      <p><strong>EN:</strong> I'm building Operação Horizonte, behavioral intervention software for ADHD & autism using ABA principles + gamification. Clinics and schools use it with their patients and students.</p>
-      <p><strong>Background:</strong> Product Manager & Designer with 15+ years designing systems, leading products, building tech. Recently ABA certified (40h, April 2026). Currently completing Psychology degree at Faculdade UNA. I built 8 proprietary applications solo — from conception through deployment — learning technical stacks (Next.js, Supabase, Vercel) independently via AI-assisted development.</p>
-      <p><strong>Operação Horizonte strategy:</strong> Free educational screening (Neuro Lens) funnels students → paid intervention software (Horizonte) sells to clinics/therapists/schools → adolescent therapeutic support (BIA) upsells for ongoing care. Unit economics: $X CAC, $Y LTV, Z% MoM growth.</p>
+      <div class="lang-content active" data-lang="pt">
+        <h2 class="section-title" id="sobre-title">Construindo <em>Operação Horizonte</em>.</h2>
+        <p>Estou construindo Operação Horizonte, software de intervenção comportamental para TDAH e autismo usando princípios de ABA e gamificação. Clínicas e escolas usam com seus pacientes e alunos.</p>
+        <p>Antecedentes: Product Manager & Designer com 15+ anos projetando sistemas, liderando produtos, construindo tech. Recentemente certificada em ABA (40h, Abr 2026). Atualmente completando Psicologia na Faculdade UNA. Construí 8 aplicações proprietárias sozinha — da concepção até deploy — aprendendo stacks técnicos (Next.js, Supabase, Vercel) independentemente via desenvolvimento assistido por IA.</p>
+        <p>Estratégia Operação Horizonte: triagem educacional gratuita (Neuro Lens) faz funil para estudantes → software de intervenção pago (Horizonte) vende para clínicas/terapeutas/escolas → suporte terapêutico de adolescentes (BIA) faz upsell para cuidado contínuo. Unit economics: $X CAC, $Y LTV, Z% MoM growth.</p>
+      </div>
+      <div class="lang-content" data-lang="en">
+        <h2 class="section-title" id="sobre-title-en">Building <em>Operação Horizonte</em>.</h2>
+        <p>I'm building Operação Horizonte, behavioral intervention software for ADHD & autism using ABA principles + gamification. Clinics and schools use it with their patients and students.</p>
+        <p><strong>Background:</strong> Product Manager & Designer with 15+ years designing systems, leading products, building tech. Recently ABA certified (40h, April 2026). Currently completing Psychology degree at Faculdade UNA. I built 8 proprietary applications solo — from conception through deployment — learning technical stacks (Next.js, Supabase, Vercel) independently via AI-assisted development.</p>
+        <p><strong>Operação Horizonte strategy:</strong> Free educational screening (Neuro Lens) funnels students → paid intervention software (Horizonte) sells to clinics/therapists/schools → adolescent therapeutic support (BIA) upsells for ongoing care. Unit economics: $X CAC, $Y LTV, Z% MoM growth.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -511,23 +540,14 @@ img,video{max-width:100%;height:auto;}
 <section id="projetos" class="projects-section" aria-labelledby="projetos-title">
   <div class="divider-gold" aria-hidden="true"></div>
   <div class="projects-header">
-    <div class="section-label" aria-hidden="true">02 / Projetos</div>
-    <!-- Ícone de Layers/Apps -->
-    <svg class="section-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="margin-bottom:1rem;">
-      <g stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <!-- Camada 1 -->
-        <rect x="25" y="50" width="70" height="35" rx="3" />
-        <polyline points="25,65 60,50 95,65" />
-        <!-- Camada 2 -->
-        <rect x="30" y="60" width="70" height="35" rx="3" opacity="0.6" />
-        <!-- Camada 3 -->
-        <rect x="35" y="70" width="70" height="35" rx="3" opacity="0.3" />
-        <!-- Indicador de profundidade -->
-        <line x1="60" y1="50" x2="60" y2="105" stroke-dasharray="2,2" opacity="0.4" />
-      </g>
-    </svg>
-    <h2 class="section-title" id="projetos-title">The Platform: <em>Full Stack</em>.</h2>
-    <p class="projects-intro">Operação Horizonte is the core product: behavioral intervention software for clinics, schools, and therapists. Below: the full platform stack—from free educational screening (Neuro Lens) to paid interventions (Horizonte, BIA) to other product explorations built with the same care.</p>
+    <div class="lang-content active" data-lang="pt">
+      <h2 class="section-title" id="projetos-title">A Plataforma: <em>Full Stack</em>.</h2>
+      <p class="projects-intro">Operação Horizonte é o produto central: software de intervenção comportamental para clínicas, escolas e terapeutas. Abaixo: o stack completo da plataforma — da triagem educacional gratuita (Neuro Lens) até intervenções pagas (Horizonte, BIA) e outras explorações de produto desenvolvidas com o mesmo cuidado.</p>
+    </div>
+    <div class="lang-content" data-lang="en">
+      <h2 class="section-title" id="projetos-title-en">The Platform: <em>Full Stack</em>.</h2>
+      <p class="projects-intro">Operação Horizonte is the core product: behavioral intervention software for clinics, schools, and therapists. Below: the full platform stack—from free educational screening (Neuro Lens) to paid interventions (Horizonte, BIA) to other product explorations built with the same care.</p>
+    </div>
   </div>
 
   <div class="projects-counter" aria-hidden="true">
@@ -851,7 +871,12 @@ img,video{max-width:100%;height:auto;}
       <line x1="80" y1="55" x2="80" y2="80" stroke-dasharray="2,2" opacity="0.3" />
     </g>
   </svg>
-  <h2 class="section-title" id="exp-title">Trajetória em <em>produto</em><br>e design.</h2>
+  <div class="lang-content active" data-lang="pt">
+    <h2 class="section-title" id="exp-title">Trajetória em <em>produto</em><br>e design.</h2>
+  </div>
+  <div class="lang-content" data-lang="en">
+    <h2 class="section-title" id="exp-title-en">Trajectory in <em>product</em><br>and design.</h2>
+  </div>
   <div class="exp-list">
 
     <!-- Projetos Independentes (J.BLK) -->
@@ -1037,13 +1062,23 @@ img,video{max-width:100%;height:auto;}
           <polygon points="60,75 63,82 71,82 65,87 68,94 60,89 52,94 55,87 49,82 57,82" />
         </g>
       </svg>
-      <div class="section-label" style="margin-bottom:1.5rem;" aria-hidden="true">Formação</div>
+      <div class="lang-content active" data-lang="pt">
+        <div class="section-label" style="margin-bottom:1.5rem;" aria-hidden="true">Formação</div>
+      </div>
+      <div class="lang-content" data-lang="en">
+        <div class="section-label" style="margin-bottom:1.5rem;" aria-hidden="true">Education</div>
+      </div>
       <div class="cert-row"><span class="cert-name">Psicologia <span class="em-tag">EM BREVE</span></span></div>
       <div class="cert-row"><span class="cert-name">Análise do Comportamento Aplicada (ABA) <span class="em-tag">EM CURSO</span></span></div>
       <div class="cert-row"><span class="cert-name">Bacharelado em Design Gráfico — ESAMC</span></div>
     </div>
     <div>
-      <div class="section-label" style="margin-bottom:1.5rem;" aria-hidden="true">Certificações</div>
+      <div class="lang-content active" data-lang="pt">
+        <div class="section-label" style="margin-bottom:1.5rem;" aria-hidden="true">Certificações</div>
+      </div>
+      <div class="lang-content" data-lang="en">
+        <div class="section-label" style="margin-bottom:1.5rem;" aria-hidden="true">Certifications</div>
+      </div>
       <div class="cert-row reveal"><span class="cert-name">Product Manager — Awari</span><span class="cert-year">2023</span></div>
       <div class="cert-row reveal"><span class="cert-name">Scrum Foundation Professional — CertiProf</span><span class="cert-year">2020</span></div>
       <div class="cert-row reveal"><span class="cert-name">Hello Design Thinking — IDEO U</span><span class="cert-year">2020</span></div>
@@ -1056,8 +1091,16 @@ img,video{max-width:100%;height:auto;}
 <footer role="contentinfo">
   <span>© 2026 Jessica Block</span>
   <span>Uberlândia, MG · Brasil</span>
-  <span>Product Design · Saúde Mental · Neurodivergência</span>
-  <span style="width:100%;text-align:center;font-size:9px;opacity:.5;margin-top:.25rem;">Todos os projetos apresentados são de concepção, design e desenvolvimento executados por Jessica Block. Desenvolvidos com IA como ferramenta central de aprendizado, prototipagem e coding.</span>
+  <div class="lang-content active" data-lang="pt">
+    <span>Design de Produto · Comportamento · Tecnologia</span>
+  </div>
+  <div class="lang-content" data-lang="en">
+    <span>Product Design · Behavior · Technology</span>
+  </div>
+  <span style="width:100%;text-align:center;font-size:9px;opacity:.5;margin-top:.25rem;">
+    <div class="lang-content active" data-lang="pt">Todos os projetos apresentados são de concepção, design e desenvolvimento executados por Jessica Block. Desenvolvidos com IA como ferramenta central de aprendizado, prototipagem e coding.</div>
+    <div class="lang-content" data-lang="en">All projects presented are conceived, designed, and developed by Jessica Block. Built with AI as a core tool for learning, prototyping, and coding.</div>
+  </span>
 </footer>
 
 <div class="sticky-bar" role="navigation" aria-label="Links rápidos">
@@ -1140,6 +1183,49 @@ document.querySelectorAll('.reveal').forEach((el,i)=>{
       });
     }
   });
+})();
+
+// LANGUAGE TOGGLE
+(function(){
+  const langBtns = document.querySelectorAll('.lang-btn');
+  const langContents = document.querySelectorAll('.lang-content');
+  
+  // Get stored language or default to PT
+  const storedLang = localStorage.getItem('portfolio-lang') || 'pt';
+  
+  // Set initial state
+  setLanguage(storedLang);
+  
+  // Add click handlers
+  langBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang;
+      setLanguage(lang);
+      localStorage.setItem('portfolio-lang', lang);
+    });
+  });
+  
+  function setLanguage(lang) {
+    // Update buttons
+    langBtns.forEach(btn => {
+      if(btn.dataset.lang === lang) {
+        btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
+      } else {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-pressed', 'false');
+      }
+    });
+    
+    // Update content
+    langContents.forEach(content => {
+      if(content.dataset.lang === lang) {
+        content.classList.add('active');
+      } else {
+        content.classList.remove('active');
+      }
+    });
+  }
 })();
 
 // PARALLAX & SCROLL EFFECTS
