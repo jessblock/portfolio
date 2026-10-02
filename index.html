@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jessica Block · Portfolio</title>
-<meta name="description" content="Product Manager & Builder specializing in mental health technology and neurodivergent-focused solutions. 15+ years in product design, strategy, and AI-powered development.">
+<meta name="description" content="Designer Gráfica · Product Owner · Builder. Apps proprietários, design estratégico e produtos digitais com propósito.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
@@ -17,24 +17,24 @@ html{scroll-behavior:smooth;}
    bg #0a0a08  ↔  muted #b9b3a4 →  ~10.4:1 (AAA)
 */
 :root{
-  --bg:#0B2B3D;
-  --bg2:#0F3550;
-  --surface:#174463;
-  --surface-2:#205477;
-  --border:rgba(0,217,255,0.08);
-  --border-md:rgba(0,217,255,0.15);
-  --text:#f2efe6;
-  --muted:#b9b3a4;
-  --accent:#00D9FF;
-  --accent2:#8B1538;
-  --nav-bg:rgba(11,43,61,0.94);
+  --bg:#000000;
+  --bg2:#0f0f0f;
+  --surface:#1a1a1a;
+  --surface-2:#242424;
+  --border:rgba(201,169,110,0.15);
+  --border-md:rgba(201,169,110,0.25);
+  --text:#f5f5f0;
+  --muted:#a8a8a0;
+  --accent:#C9A96E;
+  --accent2:#C9A96E;
+  --nav-bg:rgba(0,0,0,0.98);
   --mono:'DM Mono',monospace;
   --sans:'DM Sans',sans-serif;
   --serif:'Playfair Display',serif;
   --r-sm:6px;--r-md:12px;--r-lg:20px;
 }
 
-body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.8;font-size:16px;overflow-x:hidden;padding-bottom:60px;-webkit-font-smoothing:antialiased;}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.7;font-size:16px;overflow-x:hidden;padding-bottom:60px;-webkit-font-smoothing:antialiased;}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px;}
 .skip-link{position:absolute;top:-100%;left:1rem;background:var(--accent);color:var(--bg);padding:.5rem 1rem;font-family:var(--mono);font-size:12px;border-radius:var(--r-sm);text-decoration:none;z-index:9999;transition:top .2s;}
 .skip-link:focus{top:1rem;}
@@ -47,11 +47,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .nav-links a:hover,.nav-links a:focus-visible{color:var(--text);}
 
 /* HERO */
-.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;border-bottom:1px solid var(--border);overflow:hidden;}
-.hero-photo{position:absolute;top:0;right:0;bottom:0;width:48%;max-width:540px;}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
-.hero-photo-fade{position:absolute;inset:0;background:linear-gradient(to right,var(--bg) 0%,rgba(10,10,8,.8) 52%,rgba(10,10,8,.1) 100%);}
-.hero-content{position:relative;z-index:2;padding:9rem 3rem 5rem;max-width:580px;}
+.hero{position:relative;min-height:auto;display:grid;grid-template-columns:minmax(280px,340px) minmax(0,520px);align-items:center;justify-content:center;border-bottom:1px solid var(--border);overflow:hidden;padding:6rem 3rem;column-gap:clamp(2rem,5vw,4.5rem);}
+.hero-photo{position:relative;width:100%;max-width:340px;justify-self:end;aspect-ratio:3/4;border-radius:12px;overflow:hidden;border:1px solid var(--border);}
+.hero-photo img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;background:linear-gradient(135deg, rgba(201,169,110,0.1) 0%, transparent 100%);}
+.hero-photo-fade{display:none;}
+.hero-content{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;max-width:520px;min-width:0;}
 .hero-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--accent);text-transform:uppercase;margin-bottom:2rem;opacity:0;animation:fadeUp .7s .2s ease forwards;}
 .hero-name{font-family:var(--serif);font-size:clamp(3.5rem,8vw,8rem);line-height:.95;font-weight:700;letter-spacing:-.02em;opacity:0;animation:fadeUp .7s .4s ease forwards;}
 .hero-name em{font-style:italic;color:var(--accent);}
@@ -59,8 +59,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .hero-actions{margin-top:2.5rem;display:flex;gap:12px;flex-wrap:wrap;opacity:0;animation:fadeUp .7s .8s ease forwards;}
 .hero-btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:11px 22px;border-radius:var(--r-sm);transition:background .2s,color .2s,border-color .2s,transform .2s;border:1px solid var(--border-md);color:var(--text);background:transparent;}
 .hero-btn:hover{border-color:var(--accent);color:var(--accent);}
-.hero-btn.primary{background:#ffffff;color:var(--accent2);border-color:var(--accent2);font-weight:500;}
-.hero-btn.primary:hover{background:var(--accent2);border-color:var(--accent2);color:#ffffff;}
+.hero-btn.primary{background:var(--accent);color:var(--bg);border-color:var(--accent);font-weight:500;}
+.hero-btn.primary:hover{background:var(--text);border-color:var(--text);color:var(--bg);}
 .hero-badges{margin-top:2.75rem;display:flex;gap:8px;flex-wrap:wrap;opacity:0;animation:fadeUp .7s 1s ease forwards;}
 .hero-badge{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border-md);padding:5px 12px;border-radius:20px;}
 
@@ -74,26 +74,68 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .number-label{font-family:var(--mono);font-size:10px;letter-spacing:.15em;color:var(--muted);text-transform:uppercase;line-height:1.6;}
 
 /* SECTIONS */
-section{scroll-margin-top:64px;padding:6rem 3rem;border-bottom:1px solid var(--border);position:relative;}
-.section-label{font-family:var(--mono);font-size:10px;letter-spacing:.22em;color:var(--accent2);text-transform:uppercase;margin-bottom:2.5rem;display:flex;align-items:center;gap:1rem;}
+section{scroll-margin-top:64px;padding:5rem 3rem;border-bottom:1px solid var(--border);position:relative;}
+.section-label{font-family:var(--mono);font-size:10px;letter-spacing:.22em;color:var(--accent2);text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem;}
 .section-label::after{content:'';width:48px;height:1px;background:var(--border-md);}
 .section-title{font-family:var(--serif);font-size:clamp(2rem,4vw,3.2rem);font-weight:400;line-height:1.15;margin-bottom:1.25rem;}
 .section-title em{font-style:italic;color:var(--accent);}
 
-/* ABOUT — sem skills (skills agora vão pros cards de experiência) */
-.about-grid{display:block;max-width:760px;}
-.about-text p{color:var(--muted);margin-bottom:1.25rem;font-size:15px;}
-.about-text p strong{color:var(--text);font-weight:500;}
+/* CONTAINER & GRID SYSTEM */
+.container{max-width:1400px;margin:0 auto;padding:0 3rem;}
+.grid-12{display:grid;grid-template-columns:repeat(12,1fr);gap:2.5rem;align-items:start;}
+
+/* ABOUT — SECTION GRID */
+.about-grid{
+  display:grid !important;
+  grid-template-columns:320px 1fr !important;
+  gap:3.5rem !important;
+  align-items:start !important;
+  margin-top:1.5rem !important;
+}
+
+.about-video{
+  width:100%;
+  aspect-ratio:9/16;
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  background:var(--surface);
+}
+
+.about-video iframe{
+  width:100% !important;
+  height:100% !important;
+  display:block !important;
+  border:none !important;
+}
+
+.about-text{
+  display:flex !important;
+  flex-direction:column !important;
+  gap:1.5rem !important;
+}
+
+.about-text p{
+  color:var(--muted) !important;
+  font-size:15px !important;
+  line-height:1.85 !important;
+  margin:0 !important;
+}
+
+.about-text p strong{
+  color:var(--text);
+  font-weight:600;
+}
 
 /* PROJECTS */
 .projects-section{padding-bottom:0;border-bottom:none;}
 .projects-header{max-width:760px;}
-.projects-intro{font-size:15px;color:var(--muted);max-width:520px;margin-bottom:3.5rem;line-height:1.8;}
+.projects-intro{font-size:15px;color:var(--muted);max-width:520px;margin-bottom:2.5rem;line-height:1.8;}
 /* GALERIA HORIZONTAL — scroll snap, sem barras feias */
 .projects-gallery{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:2rem;
+  grid-template-columns:repeat(4,1fr);
+  gap:1.5rem;
   padding:1.5rem 0 2rem;
 }
 
@@ -158,6 +200,7 @@ section{scroll-margin-top:64px;padding:6rem 3rem;border-bottom:1px solid var(--b
 .badge-sub{background:rgba(212,195,154,.12);color:var(--accent);border:1px solid rgba(212,195,154,.3);}
 .badge-free{background:rgba(127,200,127,.1);color:#9ed99e;border:1px solid rgba(127,200,127,.25);}
 .badge-demo{background:rgba(180,140,200,.12);color:#c8a6d8;border:1px solid rgba(180,140,200,.3);}
+.badge-corporate{background:rgba(201,169,110,.15);color:var(--accent);border:1px solid rgba(201,169,110,.3);}
 
 /* MOCKUP — iPhone 17 Pro Max frame (aspect 19.5:9), com status bar e Dynamic Island */
 .project-mockup{display:flex;justify-content:center;align-items:center;}
@@ -219,36 +262,36 @@ section{scroll-margin-top:64px;padding:6rem 3rem;border-bottom:1px solid var(--b
   z-index:7;
   box-shadow:inset 0 0 0 .5px rgba(255,255,255,.04);
 }
-/* slide ocupa pelo menos 100% da altura do container, eliminando faixa vazia */
-.device-slide.active{min-height:100%;}
+/* Slides preenchem a área útil da tela, sem faixa preta inferior */
 .device-slides{
-  position:relative;
-  width:100%;height:100%;
-  overflow-y:auto;
-  overflow-x:hidden;
-  -webkit-overflow-scrolling:touch;
-  scrollbar-width:none;
-  padding-top:24px;
+  position:absolute;
+  inset:24px 0 0;
+  overflow:hidden;
   box-sizing:border-box;
 }
-.device-slides::-webkit-scrollbar{display:none;}
 .device-slide{
   display:none;
+  position:absolute;
+  inset:0;
   width:100%;
+  height:100%;
   opacity:0;
   transition:opacity .15s ease;
 }
 .device-slide.active{display:block;opacity:1;}
 .device-slide img{
-  width:100%;
-  height:auto;
   display:block;
-  object-fit:contain;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:top center;
 }
-
+/* Projetos 10–13: screenshots 818×1598, proporção preservada sem crop/esticamento */
+.device.device-portrait{height:auto;aspect-ratio:200 / 405;}
+.device-portrait .device-slide img{object-fit:contain;object-position:center;}
 /* EXPERIENCE — espaços generosos, divisórias, chips */
 .exp-list{display:flex;flex-direction:column;margin-top:3rem;}
-.exp-item{display:grid;grid-template-columns:260px 1fr;gap:3rem;padding:2.75rem 0 3rem;border-bottom:1px solid var(--border);align-items:start;}
+.exp-item{display:grid;grid-template-columns:200px 1fr;gap:3rem;padding:2.75rem 0 3rem;border-bottom:1px solid var(--border);align-items:start;}
 .exp-item:first-child{border-top:1px solid var(--border);}
 .exp-item:last-child{border-bottom:none;}
 .exp-meta{display:flex;flex-direction:column;gap:.4rem;}
@@ -265,7 +308,7 @@ section{scroll-margin-top:64px;padding:6rem 3rem;border-bottom:1px solid var(--b
 .exp-bullets li a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent2);transition:color .2s,border-color .2s;}
 .exp-bullets li a:hover{color:var(--text);border-color:var(--text);}
 .exp-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:2rem;}
-.exp-chip{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--accent);background:rgba(0,217,255,.07);border:1px solid rgba(0,217,255,.22);padding:7px 13px;border-radius:20px;}
+.exp-chip{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--accent);background:rgba(212,195,154,.07);border:1px solid rgba(212,195,154,.22);padding:5px 11px;border-radius:20px;}
 
 /* FORMACAO + CERTIFICACOES */
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:5rem;}
@@ -319,23 +362,16 @@ img,video{max-width:100%;height:auto;}
   .section-title{font-size:clamp(1.6rem,6vw,2.4rem);}
   .section-label{font-size:9px;}
   .about-text p{font-size:14px;}
-  /* Tablet: 2 colunas → 1 coluna */
-  .projects-gallery{
-    grid-template-columns:1fr;
-    gap:1.5rem;
-  }
   /* Mobile: scroll horizontal */
-  @media(max-width:600px){
-    .projects-gallery{
-      display:flex;flex-direction:row;
-      overflow-x:auto;overflow-y:hidden;
-      scroll-snap-type:x mandatory;
-      -webkit-overflow-scrolling:touch;
-      scrollbar-width:none;
-      padding:0 1.25rem 1.5rem;
-      margin:0 -1.25rem;
-      gap:1.25rem;
-    }
+  .projects-gallery{
+    display:flex;flex-direction:row;
+    overflow-x:auto;overflow-y:hidden;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    padding:0 1.25rem 1.5rem;
+    margin:0 -1.25rem;
+    gap:1.25rem;
   }
   .projects-gallery::-webkit-scrollbar{display:none;}
   /* Anula nth-child do grid no mobile */
@@ -353,7 +389,7 @@ img,video{max-width:100%;height:auto;}
   .number-value{font-size:clamp(2rem,7vw,2.6rem);}
   .number-label{font-size:9px;}
   .exp-list{margin-top:2rem;}
-  .exp-item{grid-template-columns:120px 1fr;gap:1.5rem;padding:2.25rem 0 2.5rem;}
+  .exp-item{grid-template-columns:1fr;gap:1rem;padding:2.25rem 0 2.5rem;}
   .exp-role{font-size:1.05rem;}
   /* Em mobile: empresas escondidas + tags quebram naturalmente */
   .exp-client.mobile-hidden{display:none;}
@@ -379,16 +415,153 @@ img,video{max-width:100%;height:auto;}
 }
 
 /* Badge Em captação */
-.badge-cap{background:rgba(139,21,56,.12);color:var(--accent2);border:1px solid rgba(139,21,56,.3);}
+.badge-cap{background:rgba(201,169,110,.12);color:#c9a96e;border:1px solid rgba(201,169,110,.35);}
 
+/* ════════════════════════════════════════════════════════════════ */
+/* MELHORIAS UX — GRID PROFISSIONAL 2024 */
+/* ════════════════════════════════════════════════════════════════ */
 
+/* ABOUT — 2 COLUNAS GRID */
+.about-grid{
+  display:grid !important;
+  grid-template-columns:320px 1fr !important;
+  gap:3.5rem !important;
+  align-items:start !important;
+  margin-top:1.5rem !important;
+}
+
+.about-video{
+  width:100%;
+  aspect-ratio:9/16;
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  background:var(--surface);
+}
+
+.about-video iframe{
+  width:100% !important;
+  height:100% !important;
+  display:block !important;
+  border:none !important;
+}
+
+.about-text{
+  display:flex !important;
+  flex-direction:column !important;
+  gap:1.5rem !important;
+}
+
+.about-text p{
+  color:var(--muted) !important;
+  font-size:15px !important;
+  line-height:1.85 !important;
+  margin:0 !important;
+}
+
+/* PROJECTS — 4 COLUNAS GRID */
+.projects-gallery{display:grid !important;grid-template-columns:repeat(4,1fr) !important;gap:2rem !important;padding:2rem 0 !important;margin-top:2rem !important;}
+.project-item{background:var(--surface) !important;border:1px solid var(--border) !important;border-radius:12px !important;transition:all .3s !important;}
+.project-item:hover{border-color:var(--accent) !important;background:var(--surface-2) !important;}
+
+/* EXPERIENCE — 2 COLUNAS GRID */
+.exp-item{display:grid !important;grid-template-columns:200px 1fr !important;gap:3rem !important;padding:2.75rem 0 3rem !important;border-bottom:1px solid var(--border) !important;}
+.exp-item:first-child{border-top:1px solid var(--border) !important;}
+
+/* RESPONSIVE — 1440px */
+@media(max-width:1440px){.projects-gallery{grid-template-columns:repeat(3,1fr) !important;gap:1.5rem !important;}.about-grid{gap:3rem !important;}}
+
+/* RESPONSIVE — 1024px */
+@media(max-width:1024px){
+  .about-grid{
+    grid-template-columns:1fr !important;
+    gap:3rem !important;
+  }
+  .projects-gallery{
+    grid-template-columns:repeat(2,1fr) !important;
+    gap:1.5rem !important;
+  }
+  .exp-item{
+    grid-template-columns:150px 1fr !important;
+    gap:2rem !important;
+  }
+}
+
+/* RESPONSIVE — 768px (TABLET) */
+@media(max-width:768px){
+  .hero{
+    flex-direction:column;
+    padding:3rem 1.5rem;
+    gap:2rem;
+  }
+  .hero-photo{
+    width:100%;
+    max-width:300px;
+  }
+  .hero-content{
+    width:100%;
+  }
+  .about-grid{
+    grid-template-columns:1fr !important;
+  }
+  .projects-gallery{
+    grid-template-columns:1fr !important;
+    gap:1.5rem !important;
+  }
+  .exp-item{
+    grid-template-columns:1fr !important;
+    gap:1.5rem !important;
+    padding:1.5rem !important;
+    background:var(--surface) !important;
+    border-radius:12px !important;
+    border:1px solid var(--border) !important;
+  }
+}
+
+/* RESPONSIVE — 480px */
+@media(max-width:480px){.projects-gallery{grid-template-columns:1fr !important;}}
+
+@media(max-width:768px){.device.device-portrait{height:auto;aspect-ratio:200 / 405;}}
+
+/* Responsive layout: keep every column within its available width. */
+.hero > *, .about-grid > *, .projects-gallery > *, .form-grid > * {min-width:0;}
+.projects-gallery {grid-template-columns:repeat(4,minmax(0,1fr)) !important;}
+.project-item {min-width:0;width:auto;max-width:none;}
+.project-title,.project-desc,.exp-bullets,.cert-name {overflow-wrap:anywhere;}
+@media(max-width:1440px){
+  .projects-gallery {grid-template-columns:repeat(3,minmax(0,1fr)) !important;}
+}
+@media(max-width:1100px){
+  .projects-gallery {grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+}
+@media(max-width:768px){
+  .hero {grid-template-columns:minmax(0,1fr);padding:5.5rem 1.25rem 3rem;gap:2rem;}
+  .hero-photo {justify-self:center;max-width:280px;aspect-ratio:3/4;}
+  .hero-photo img {height:100%;object-fit:contain;}
+  .hero-content {margin-top:0;padding:0;max-width:520px;justify-self:center;}
+  .hero-eyebrow {font-size:10px;letter-spacing:.12em;margin-bottom:1.25rem;}
+  .hero-name {font-size:clamp(2.8rem,12vw,4.5rem);}
+  .hero-tagline {margin-top:1.5rem;}
+  .hero-actions {margin-top:1.5rem;}
+  .hero-badges {margin-top:1.5rem;padding-bottom:0;}
+  .about-grid {grid-template-columns:minmax(0,1fr) !important;gap:2rem !important;}
+  .about-video {max-width:320px;justify-self:center;}
+  .about-text p {font-size:14px !important;}
+  .projects-gallery {grid-template-columns:minmax(0,1fr) !important;margin:1.5rem 0 0 !important;padding:0 0 2rem !important;overflow:visible;scroll-snap-type:none;gap:1.5rem !important;}
+  .project-item {width:100%;max-width:none;flex:auto;padding:1.5rem;gap:1.5rem;}
+  .project-item:hover {transform:none;}
+  .device {width:200px;max-width:100%;height:auto;aspect-ratio:200/433;}
+  .project-badge {margin-left:0;margin-top:.5rem;display:table;}
+  .exp-list {gap:1rem;}
+  .exp-item {grid-template-columns:minmax(0,1fr) !important;}
+  .form-grid {grid-template-columns:minmax(0,1fr);}
+  .cert-row {align-items:flex-start;}
+  .hero-btn,.sticky-bar a {min-height:44px;}
+  .sticky-bar {height:calc(52px + env(safe-area-inset-bottom));padding-bottom:env(safe-area-inset-bottom);}
+  body {padding-bottom:calc(60px + env(safe-area-inset-bottom));}
+}
 
 </style>
-<meta property="og:title" content="Jessica Block · Product Manager for Mental Health & Neurodivergence">
-<meta property="og:description" content="Product Manager & Builder specializing in mental health technology and solutions for neurodivergent communities. 15+ years experience, ABA certification, 8 proprietary applications.">
-<meta property="og:url" content="https://jessicatwblock-hub.github.io/portfolio/">
-<meta property="og:type" content="website">
-<link rel="canonical" href="https://jessicatwblock-hub.github.io/portfolio/">
 </head>
 <body>
 
@@ -406,20 +579,20 @@ img,video{max-width:100%;height:auto;}
 <!-- HERO -->
 <header class="hero" id="main">
   <div class="hero-photo" aria-hidden="true">
-    <img src="assets/jess.jpg" alt="" loading="eager" />
-    <div class="hero-photo-fade"></div>
+    <img src="assets/jessicablock.png" alt="" loading="eager" />
   </div>
   <div class="hero-content">
-    <p class="hero-eyebrow">✦ Product Manager · Designer · Builder</p>
+    <p class="hero-eyebrow">✦ Designer · Product Owner · Builder</p>
     <h1 class="hero-name">Jessica<br><em>Block.</em></h1>
-    <p class="hero-tagline">Product for mental health and neurodiversity. 15+ years designing systems, managing products, and building tools with intention and impact.</p>
+    <p class="hero-tagline">Design, produto e tecnologia com propósito. No cruzamento entre clareza visual, gestão de produto e construção de ferramentas digitais, há mais de 15 anos.</p>
     <div class="hero-actions">
       <a href="#projetos" class="hero-btn primary">Ver projetos</a>
       <a href="mailto:jessicatwblock@gmail.com" class="hero-btn">Entrar em contato</a>
     </div>
     <div class="hero-badges">
-      <span class="hero-badge">Uberlândia, MG · Brasil</span>
-      <span class="hero-badge">Open to remote roles</span>
+      <span class="hero-badge">Uberlândia, MG</span>
+      <span class="hero-badge">Remoto</span>
+      <span class="hero-badge">Brasil · Europa · EUA</span>
     </div>
   </div>
 </header>
@@ -448,12 +621,15 @@ img,video{max-width:100%;height:auto;}
 <section id="sobre" aria-labelledby="sobre-title">
   <div class="section-label" aria-hidden="true">01 / Sobre</div>
   <div class="about-grid">
+    <div class="about-video">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/BaQXm7XMDn4?modestbranding=1" title="Jessica Block - Apresentação" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
     <div class="about-text">
-      <h2 class="section-title" id="sobre-title">Product for mental health <em>&</em> neurodiversity.</h2>
-      <p><strong>PT-BR:</strong> Design, produto e tecnologia com propósito — especializada em saúde mental e tecnologias para neurodivergência. No cruzamento entre estratégia visual, gestão de produto e construção de ferramentas digitais, há mais de 15 anos.</p>
-      <p><strong>EN:</strong> I'm a Product Manager and Builder with 15+ years designing systems, leading product teams, and building technology solutions. Specialized in mental health tech and solutions for neurodivergent communities. Recently completed ABA certification (40-hour intensive, April 2026) specializing in behavioral intervention for neurodivergent populations; now applying these clinical principles to product design and user experience strategy.</p>
-      <p>My work spans: Product Strategy & Roadmapping, User Experience Design, Instructional Design, Brand Development, and Full-Stack Product Development using AI as core toolkit. I built 8 proprietary applications solo—from conception through deployment—learning technical stack (GitHub, Next.js, Supabase, etc.) independently via AI-assisted development.</p>
-      <p>Fluent in Portuguese & English. Based in Brazil, open to remote roles globally.</p>
+      <h2 class="section-title" id="sobre-title">Design com <em>intenção</em>.<br>Produto com propósito.</h2>
+      <p>Sou Product Manager, Product Owner, Builder, Designer Instrucional e Graphic Designer. Trabalho com experiência em EdTech, SaaS B2B e produtos digitais. Tenho uma mentalidade estratégica focada em comunicação visual, gestão de produto e construção de ferramentas com IA.</p>
+      <p>Tenho interesse particular em produtos voltados à saúde mental e neurodivergência, área em que criei a Neuro Lens, app proprietário de triagem para TEA e TDAH baseado no DSM-5, desenvolvido por mim do zero.</p>
+      <p>Tenho mais de 15 anos entre design gráfico, design instrucional, EdTech e gestão de produto. Na Dialog, fui <strong>Coordenadora da Área de Produtos Digitais e Product Owner simultaneamente</strong>, liderando equipe e cuidando do operacional do produto ao mesmo tempo, em uma plataforma SaaS B2B com IA. Atuei por anos como Designer Instrucional criando programas educacionais para empresas como Itaú-Unibanco, Nestlé e Bayer.</p>
+      <p>Uso IA como ferramenta de criação e construção. Os projetos abaixo são apps proprietários que concebi, desenhei e desenvolvi por completo, do zero.</p>
     </div>
   </div>
 </section>
@@ -463,69 +639,28 @@ img,video{max-width:100%;height:auto;}
   <div class="projects-header">
     <div class="section-label" aria-hidden="true">02 / Projetos</div>
     <h2 class="section-title" id="projetos-title">Projetos que <em>criei</em>.</h2>
-    <p class="projects-intro">Oito projetos proprietários criados por mim do zero — concepção, design, produto e desenvolvimento. Obra Certa disponível por assinatura; Neuro Lens, Convergir, Oráculo Pessoal, BIA, Operação Horizonte e The Fault Line com acesso gratuito ou demo. SensoryShield em fase de captação.</p>
+    <p class="projects-intro">10 projetos de concepção, design, produto e desenvolvimento, incluindo um case study corporativo. A coleção reúne apps, narrativas interativas, portfólios profissionais e ferramentas digitais com acesso gratuito, demo ou assinatura.</p>
   </div>
 
   <div class="projects-counter" aria-hidden="true">
-    <div class="projects-counter-dots">
-      <div class="projects-counter-dot active"></div>
-      <div class="projects-counter-dot active"></div>
-      <div class="projects-counter-dot active"></div>
-      <div class="projects-counter-dot active"></div>
-      <div class="projects-counter-dot active"></div>
-      <div class="projects-counter-dot active"></div>
-      <div class="projects-counter-dot active"></div>
-    </div>
-    <span class="projects-counter-label">8 projetos</span>
+    <div class="projects-counter-dots"><div class="projects-counter-dot active"></div><div class="projects-counter-dot active"></div><div class="projects-counter-dot active"></div><div class="projects-counter-dot active"></div><div class="projects-counter-dot active"></div><div class="projects-counter-dot active"></div><div class="projects-counter-dot active"></div><div class="projects-counter-dot active"></div><div class="projects-counter-dot active"></div><div class="projects-counter-dot active"></div></div>
+    <span class="projects-counter-label">10 projetos</span>
   </div>
-  <div class="projects-gallery has-7" role="region" aria-label="Galeria de apps">
+  <div class="projects-gallery" role="region" aria-label="Galeria de projetos">
 
-  <!-- 01 OBRA CERTA -->
-  <article class="project-item reveal" aria-labelledby="proj1-title">
-    <div>
-      <div class="project-index" aria-hidden="true">01</div>
-      <h3 class="project-title" id="proj1-title">Obra Certa <span class="project-badge badge-sub">Assinatura</span></h3>
-      <div class="project-type">SaaS B2B · Construção Civil · Multi-tenant</div>
-      <p class="project-desc">Plataforma completa de gestão de obras: controle de ponto com geolocalização, escalas semanais, livro diário, chat interno, relatórios em PDF e assistente com IA. Arquitetura multi-tenant white-label com quatro perfis de acesso distintos: super admin, gestor, encarregado e trabalhador.</p>
-      <div class="project-tags"><span class="tag">SaaS B2B</span><span class="tag">Multi-tenant</span><span class="tag">IA</span><span class="tag">PWA</span><span class="tag">Construção Civil</span></div>
-      <a href="https://appobracerta.com" target="_blank" rel="noopener noreferrer" class="project-cta">Acessar app ↗</a>
-      
-    </div>
-    <div class="project-mockup" aria-hidden="true">
-      <div class="mockup-wrap">
-        <div class="device">
-          <div class="device-screen">
-            <div class="device-island" aria-hidden="true"></div>
-            <div class="device-statusbar" aria-hidden="true">
-              <span class="device-statusbar-time">9:41</span>
-              <span class="device-statusbar-icons">
-                <svg width="11" height="7" viewBox="0 0 17 11" fill="none"><rect x="0" y="6" width="3" height="5" rx="1" fill="#fff"/><rect x="4.7" y="4" width="3" height="7" rx="1" fill="#fff"/><rect x="9.4" y="2" width="3" height="9" rx="1" fill="#fff"/><rect x="14.1" y="0" width="3" height="11" rx="1" fill="#fff"/></svg>
-                <svg width="11" height="8" viewBox="0 0 16 11" fill="none"><path d="M8 2.5c2.2 0 4.2 0.8 5.7 2.2l1.4-1.4C13.3 1.5 10.7 0.5 8 0.5S2.7 1.5 0.9 3.3l1.4 1.4C3.8 3.3 5.8 2.5 8 2.5zM8 6c1.2 0 2.3 0.4 3.1 1.2l1.4-1.4C11.3 4.7 9.7 4 8 4S4.7 4.7 3.5 5.8l1.4 1.4C5.7 6.4 6.8 6 8 6zM8 9.5c0.7 0 1.4 0.3 1.9 0.8L8 12.2 6.1 10.3C6.6 9.8 7.3 9.5 8 9.5z" fill="#fff"/></svg>
-                <svg width="16" height="8" viewBox="0 0 25 11" fill="none"><rect x="0.5" y="0.5" width="21" height="10" rx="2.5" stroke="#fff" stroke-opacity="0.5" fill="none"/><rect x="2" y="2" width="18" height="7" rx="1" fill="#fff"/><rect x="22.5" y="3.5" width="1.5" height="4" rx="0.7" fill="#fff" fill-opacity="0.5"/></svg>
-              </span>
-            </div>
-            <div class="device-slides" id="obracerta-slides">
-              <div class="device-slide active"><img src="assets/obracerta_1.webp" alt="" loading="lazy"/></div>
-              <div class="device-slide"><img src="assets/obracerta_2.webp" alt="" loading="lazy"/></div>
-              <div class="device-slide"><img src="assets/obracerta_3.webp" alt="" loading="lazy"/></div>
-              <div class="device-slide"><img src="assets/obracerta_4.webp" alt="" loading="lazy"/></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </article>
+  
+  
 
   <!-- 02 NEURO LENS -->
   <article class="project-item reverse reveal" aria-labelledby="proj2-title">
     <div>
-      <div class="project-index" aria-hidden="true">02</div>
+      <div class="project-index" aria-hidden="true">01</div>
       <h3 class="project-title" id="proj2-title">Neuro Lens <span class="project-badge badge-free">Gratuito</span></h3>
       <div class="project-type">Ferramenta educacional · TEA e TDAH · Acessibilidade</div>
       <p class="project-desc">Triagem educacional para reconhecer padrões de TEA e TDAH em quatro perspectivas: autopercepção, olhar do parceiro, avaliação combinada e versão para pais de crianças de 4 a 12 anos. Baseado nos critérios do DSM-5. Gratuito, sem cadastro e sem coleta de dados.</p>
       <div class="project-tags"><span class="tag">TEA / TDAH</span><span class="tag">DSM-5</span><span class="tag">Acessibilidade</span><span class="tag">Saúde mental</span><span class="tag">Sem cadastro</span></div>
       <a href="https://jessblock.github.io/neurolens/" target="_blank" rel="noopener noreferrer" class="project-cta">Acessar app ↗</a>
-      
+      <p class="project-copyright">© Jessica Block — todos os direitos reservados.</p>
     </div>
     <div class="project-mockup" aria-hidden="true">
       <div class="mockup-wrap">
@@ -555,13 +690,13 @@ img,video{max-width:100%;height:auto;}
   <!-- 03 CONVERGIR (NOVO) -->
   <article class="project-item reveal" aria-labelledby="proj3-title">
     <div>
-      <div class="project-index" aria-hidden="true">03</div>
+      <div class="project-index" aria-hidden="true">02</div>
       <h3 class="project-title" id="proj3-title">Convergir <span class="project-badge badge-demo">Demo</span></h3>
       <div class="project-type">Narrativa interativa · Ficção científica romântica</div>
       <p class="project-desc">Narrativa interativa com mecânicas imersivas de jogo: ficção científica romântica em que o leitor sintoniza frequências, atravessa cenários e acompanha a história de Lia e Bento até o ponto de convergência. Trilha sonora, ilustrações originais e ritmo próprio em cada capítulo.</p>
       <div class="project-tags"><span class="tag">Narrativa interativa</span><span class="tag">Game design</span><span class="tag">Ficção científica</span><span class="tag">Trilha original</span></div>
       <a href="https://jessblock.github.io/convergir/" target="_blank" rel="noopener noreferrer" class="project-cta">Jogar ↗</a>
-      
+      <p class="project-copyright">© Jessica Block — todos os direitos reservados.</p>
     </div>
     <div class="project-mockup" aria-hidden="true">
       <div class="mockup-wrap">
@@ -592,13 +727,13 @@ img,video{max-width:100%;height:auto;}
   <!-- 04 ORACULO -->
   <article class="project-item reverse reveal" aria-labelledby="proj4-title">
     <div>
-      <div class="project-index" aria-hidden="true">04</div>
+      <div class="project-index" aria-hidden="true">03</div>
       <h3 class="project-title" id="proj4-title">Oráculo Pessoal <span class="project-badge badge-free">Gratuito</span></h3>
       <div class="project-type">Entretenimento · IA generativa · Misticismo</div>
       <p class="project-desc">Experiência de leitura oracular gerada por IA: o usuário responde perguntas e recebe uma interpretação simbólica personalizada. Entretenimento e introspecção leve, sem nenhuma pretensão diagnóstica ou terapêutica.</p>
       <div class="project-tags"><span class="tag">IA generativa</span><span class="tag">Misticismo</span><span class="tag">Entretenimento</span></div>
       <a href="https://oraculopessoal.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-cta">Acessar app ↗</a>
-      
+      <p class="project-copyright">© Jessica Block — todos os direitos reservados.</p>
     </div>
     <div class="project-mockup" aria-hidden="true">
       <div class="mockup-wrap">
@@ -629,13 +764,13 @@ img,video{max-width:100%;height:auto;}
 
   <article class="project-item reveal" aria-labelledby="proj5-title">
     <div>
-      <div class="project-index" aria-hidden="true">05</div>
+      <div class="project-index" aria-hidden="true">04</div>
       <h3 class="project-title" id="proj5-title">BIA <span class="project-badge badge-demo">Demo</span></h3>
       <div class="project-type">Saúde mental · Neurodivergência · Família</div>
       <p class="project-desc">App de acompanhamento terapêutico para adolescentes neurodivergentes e suas famílias: diário emocional, bateria social com cronômetro de interação, registro de crise, exercícios guiados de regulação, conquistas e painel compartilhado com a família e AT. Desenvolvido com foco em TDAH e TEA.</p>
       <div class="project-tags"><span class="tag">Saúde mental</span><span class="tag">TEA / TDAH</span><span class="tag">Família</span><span class="tag">Regulação emocional</span><span class="tag">PWA</span></div>
       <a href="https://biaintervapp-7vo5jplf.manus.space/" target="_blank" rel="noopener noreferrer" class="project-cta">Acessar app ↗</a>
-      
+      <p class="project-copyright">© Jessica Block — todos os direitos reservados.</p>
     </div>
     <div class="project-mockup" aria-hidden="true">
       <div class="mockup-wrap">
@@ -665,13 +800,13 @@ img,video{max-width:100%;height:auto;}
 
   <article class="project-item reverse reveal" aria-labelledby="proj6-title">
     <div>
-      <div class="project-index" aria-hidden="true">06</div>
+      <div class="project-index" aria-hidden="true">05</div>
       <h3 class="project-title" id="proj6-title">Operação Horizonte <span class="project-badge badge-demo">Demo</span></h3>
       <div class="project-type">Gamificação · Neurodivergência · Família</div>
       <p class="project-desc">App de gamificação de rotina para crianças neurodivergentes: sistema de missões diárias, laboratório criativo, conquistas, XP e progressão por ranking. Painel de comando para o responsável configurar missões, aprovar entregas e acompanhar o progresso. Desenvolvido para tornar a rotina estruturada em aventura.</p>
       <div class="project-tags"><span class="tag">Gamificação</span><span class="tag">TEA / TDAH</span><span class="tag">Rotina</span><span class="tag">Criança</span><span class="tag">PWA</span></div>
       <a href="https://horizonte-tau.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-cta">Acessar app ↗</a>
-      
+      <p class="project-copyright">© Jessica Block — todos os direitos reservados.</p>
     </div>
     <div class="project-mockup" aria-hidden="true">
       <div class="mockup-wrap">
@@ -699,78 +834,134 @@ img,video{max-width:100%;height:auto;}
     </div>
   </article>
 
-  <!-- 07 SENSORYSHIELD -->
-  <article class="project-item reveal" aria-labelledby="proj7-title">
+  
+  
+
+  
+  
+
+  <!-- 09 BRAIN PORTAL -->
+  <article class="project-item reveal" aria-labelledby="proj9-title">
+    <div>
+      <div class="project-index" aria-hidden="true">06</div>
+      <h3 class="project-title" id="proj9-title">Brain Portal <span class="project-badge badge-corporate">Corporativo</span></h3>
+      <div class="project-type">Design Corporativo · Portal Institucional · Comunicação Visual</div>
+      <p class="project-desc">Portal institucional do Instituto Brain (Algar Telecom): arquitetura informacional estratégica, design system coeso, identidade visual moderna e experiência de navegação intuitiva para apresentar soluções, verticais de negócio, squads e atração de talento. Direção estratégica, wireframing, visual design e prototipagem.</p>
+      <div class="project-tags"><span class="tag">Portal Institucional</span><span class="tag">Design Gráfico</span><span class="tag">Identidade Visual</span><span class="tag">Comunicação Estratégica</span></div>
+      <a href="https://jessblock.github.io/brain-portal-jessblock/index.html" class="project-cta" target="_blank" rel="noopener">Acessar portal ↗</a>
+      <p class="project-copyright">© 2026 Brain Inovação / Design: Jessica Block — todos os direitos reservados.</p>
+    </div>
+    <div class="project-mockup" aria-hidden="true">
+      <div class="mockup-wrap">
+        <div class="device">
+          <div class="device-screen">
+            <div class="device-island" aria-hidden="true"></div>
+            <div class="device-statusbar" aria-hidden="true">
+              <span class="device-statusbar-time">9:41</span>
+              <span class="device-statusbar-icons">
+                <svg width="11" height="7" viewBox="0 0 17 11" fill="none"><rect x="0" y="6" width="3" height="5" rx="1" fill="#fff"/><rect x="4.7" y="4" width="3" height="7" rx="1" fill="#fff"/><rect x="9.4" y="2" width="3" height="9" rx="1" fill="#fff"/><rect x="14.1" y="0" width="3" height="11" rx="1" fill="#fff"/></svg>
+                <svg width="11" height="8" viewBox="0 0 16 11" fill="none"><path d="M8 2.5c2.2 0 4.2 0.8 5.7 2.2l1.4-1.4C13.3 1.5 10.7 0.5 8 0.5S2.7 1.5 0.9 3.3l1.4 1.4C3.8 3.3 5.8 2.5 8 2.5zM8 6c1.2 0 2.3 0.4 3.1 1.2l1.4-1.4C11.3 4.7 9.7 4 8 4S4.7 4.7 3.5 5.8l1.4 1.4C5.7 6.4 6.8 6 8 6zM8 9.5c0.7 0 1.4 0.3 1.9 0.8L8 12.2 6.1 10.3C6.6 9.8 7.3 9.5 8 9.5z" fill="#fff"/></svg>
+                <svg width="16" height="8" viewBox="0 0 25 11" fill="none"><rect x="0.5" y="0.5" width="21" height="10" rx="2.5" stroke="#fff" stroke-opacity="0.5" fill="none"/><rect x="2" y="2" width="18" height="7" rx="1" fill="#fff"/><rect x="22.5" y="3.5" width="1.5" height="4" rx="0.7" fill="#fff" fill-opacity="0.5"/></svg>
+              </span>
+            </div>
+            <div class="device-slides" id="bp-slides" style="overflow:hidden">
+              <div class="device-slide active"><img src="assets/brainportal_1.webp" alt="" loading="lazy"/></div>
+              <div class="device-slide"><img src="assets/brainportal_2.webp" alt="" loading="lazy"/></div>
+              <div class="device-slide"><img src="assets/brainportal_3.webp" alt="" loading="lazy"/></div>
+              <div class="device-slide"><img src="assets/brainportal_4.webp" alt="" loading="lazy"/></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+
+  <!-- 10 EXACTA -->
+  <article class="project-item reveal" aria-labelledby="proj10-title">
+    <div class="project-mockup" aria-label="Screenshot real do projeto Exacta">
+      <div class="mockup-wrap"><div class="device device-portrait"><div class="device-screen">
+        <div class="device-island" aria-hidden="true"></div>
+        <div class="device-statusbar" aria-hidden="true"><span class="device-statusbar-time">9:41</span></div>
+        <div class="device-slides" id="exacta-slides"><div class="device-slide active"><img src="exacta_1.jpeg" alt="Tela real do Exacta, controle de despesas" loading="lazy"/></div><div class="device-slide"><img src="exacta_2.jpeg" alt="Tela real do Exacta" loading="lazy"/></div><div class="device-slide"><img src="exacta_3.jpeg" alt="Tela real do Exacta" loading="lazy"/></div><div class="device-slide"><img src="exacta_4.jpeg" alt="Tela real do Exacta" loading="lazy"/></div></div>
+      </div></div></div>
+    </div>
     <div>
       <div class="project-index" aria-hidden="true">07</div>
-      <h3 class="project-title" id="proj7-title">SensoryShield <span class="project-badge badge-cap">Em captação</span></h3>
-      <div class="project-type">Moda · Sensorialidade · Inclusão · Wearable tech</div>
-      <p class="project-desc">Marca de roupas para pessoas com alta sensibilidade sensorial, em fase de captação de investimentos. Duplo capuz bloqueador de luz, almofadas acústicas quilted, fechamento magnético silencioso, mangas extra-longas com thumbholes e costura flatlock. Proteção sensorial real com estética de luxo. Modal 70% + Microfibra 30%.</p>
-      <div class="project-tags"><span class="tag">Moda sensorial</span><span class="tag">Wearable tech</span><span class="tag">Inclusão</span><span class="tag">TEA / TDAH</span><span class="tag">Investimento</span></div>
-      <a href="https://wa.me/5534999441161?text=Ol%C3%A1%2C+tenho+interesse+em+saber+mais+sobre+o+SensoryShield" class="project-cta" target="_blank" rel="noopener">Falar sobre investimento ↗</a>
-      
-    </div>
-    <div class="project-mockup" aria-hidden="true">
-      <div class="mockup-wrap">
-        <div class="device">
-          <div class="device-screen">
-            <div class="device-island" aria-hidden="true"></div>
-            <div class="device-statusbar" aria-hidden="true">
-              <span class="device-statusbar-time">9:41</span>
-              <span class="device-statusbar-icons">
-                <svg width="11" height="7" viewBox="0 0 17 11" fill="none"><rect x="0" y="6" width="3" height="5" rx="1" fill="#fff"/><rect x="4.7" y="4" width="3" height="7" rx="1" fill="#fff"/><rect x="9.4" y="2" width="3" height="9" rx="1" fill="#fff"/><rect x="14.1" y="0" width="3" height="11" rx="1" fill="#fff"/></svg>
-                <svg width="11" height="8" viewBox="0 0 16 11" fill="none"><path d="M8 2.5c2.2 0 4.2 0.8 5.7 2.2l1.4-1.4C13.3 1.5 10.7 0.5 8 0.5S2.7 1.5 0.9 3.3l1.4 1.4C3.8 3.3 5.8 2.5 8 2.5zM8 6c1.2 0 2.3 0.4 3.1 1.2l1.4-1.4C11.3 4.7 9.7 4 8 4S4.7 4.7 3.5 5.8l1.4 1.4C5.7 6.4 6.8 6 8 6zM8 9.5c0.7 0 1.4 0.3 1.9 0.8L8 12.2 6.1 10.3C6.6 9.8 7.3 9.5 8 9.5z" fill="#fff"/></svg>
-                <svg width="16" height="8" viewBox="0 0 25 11" fill="none"><rect x="0.5" y="0.5" width="21" height="10" rx="2.5" stroke="#fff" stroke-opacity="0.5" fill="none"/><rect x="2" y="2" width="18" height="7" rx="1" fill="#fff"/><rect x="22.5" y="3.5" width="1.5" height="4" rx="0.7" fill="#fff" fill-opacity="0.5"/></svg>
-              </span>
-            </div>
-            <div class="device-slides" id="ss-slides" style="overflow:hidden">
-              <div class="device-slide active"><img src="assets/sensoryshield_1.webp" alt="" loading="eager"/></div>
-              <div class="device-slide"><img src="assets/sensoryshield_2.webp" alt="" loading="eager"/></div>
-              <div class="device-slide"><img src="assets/sensoryshield_3.webp" alt="" loading="eager"/></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h3 class="project-title" id="proj10-title">Exacta <span class="project-badge badge-sub">Assinatura</span></h3>
+      <div class="project-type">Gestão financeira · Despesas de equipe · Produto digital</div>
+      <p class="project-desc">Ferramenta simples para registrar, acompanhar e organizar as despesas de funcionários. Reúne filtros por pessoa, período e categoria, totais automáticos, demonstrativo mensal em PDF e backup dos dados — sem planilhas confusas e sem mensalidade.</p>
+      <div class="project-tags"><span class="tag">Finanças</span><span class="tag">Gestão</span><span class="tag">PDF</span><span class="tag">Offline</span><span class="tag">UX</span></div>
+      <a href="https://fecha-despesas.jtwb1988.chatgpt.site/" class="project-cta" target="_blank" rel="noopener noreferrer">Acessar projeto ↗</a>
+      <p class="project-copyright">© Jessica Block — todos os direitos reservados.</p>
     </div>
   </article>
 
-  <!-- 08 THE FAULT LINE -->
-  <article class="project-item reveal" aria-labelledby="proj8-title">
+  <!-- 11 PAULO OTÁVIO -->
+  <article class="project-item reveal" aria-labelledby="proj11-title">
+    <div class="project-mockup" aria-label="Screenshot real do portfólio de Paulo Otávio">
+      <div class="mockup-wrap"><div class="device device-portrait"><div class="device-screen">
+        <div class="device-island" aria-hidden="true"></div>
+        <div class="device-statusbar" aria-hidden="true"><span class="device-statusbar-time">9:41</span></div>
+        <div class="device-slides" id="paulo-slides"><div class="device-slide active"><img src="paulo_1.jpeg" alt="Tela real do portfólio de Paulo Otávio" loading="lazy"/></div><div class="device-slide"><img src="paulo_2.jpeg" alt="Tela real do portfólio de Paulo Otávio" loading="lazy"/></div><div class="device-slide"><img src="paulo_3.jpeg" alt="Tela real do portfólio de Paulo Otávio" loading="lazy"/></div><div class="device-slide"><img src="paulo_4.jpeg" alt="Tela real do portfólio de Paulo Otávio" loading="lazy"/></div><div class="device-slide"><img src="paulo_5.jpeg" alt="Tela real do portfólio de Paulo Otávio" loading="lazy"/></div></div>
+      </div></div></div>
+    </div>
     <div>
       <div class="project-index" aria-hidden="true">08</div>
-      <h3 class="project-title" id="proj8-title">The Fault Line <span class="project-badge badge-free">Gratuito</span></h3>
-      <div class="project-type">Escrita criativa · Design editorial · Identidade sonora</div>
-      <p class="project-desc">Álbum conceitual em formato web de seis faixas explorando amor, vulnerabilidade e escolha. Letras originais em inglês e português, player de áudio imersivo, identidade visual autoral e narrativa completa da primeira cena ao ato final. Concebido, escrito e desenvolvido por J.BLK.</p>
-      <div class="project-tags"><span class="tag">Escrita criativa</span><span class="tag">Design editorial</span><span class="tag">Narrativa</span><span class="tag">Identidade visual</span><span class="tag">Projeto autoral</span></div>
-      <a href="https://faultlinealb-sttgbqcx.manus.space/" class="project-cta" target="_blank" rel="noopener">Acessar álbum ↗</a>
-      
-    </div>
-    <div class="project-mockup" aria-hidden="true">
-      <div class="mockup-wrap">
-        <div class="device">
-          <div class="device-screen">
-            <div class="device-island" aria-hidden="true"></div>
-            <div class="device-statusbar" aria-hidden="true">
-              <span class="device-statusbar-time">9:41</span>
-              <span class="device-statusbar-icons">
-                <svg width="11" height="7" viewBox="0 0 17 11" fill="none"><rect x="0" y="6" width="3" height="5" rx="1" fill="#fff"/><rect x="4.7" y="4" width="3" height="7" rx="1" fill="#fff"/><rect x="9.4" y="2" width="3" height="9" rx="1" fill="#fff"/><rect x="14.1" y="0" width="3" height="11" rx="1" fill="#fff"/></svg>
-                <svg width="11" height="8" viewBox="0 0 16 11" fill="none"><path d="M8 2.5c2.2 0 4.2 0.8 5.7 2.2l1.4-1.4C13.3 1.5 10.7 0.5 8 0.5S2.7 1.5 0.9 3.3l1.4 1.4C3.8 3.3 5.8 2.5 8 2.5zM8 6c1.2 0 2.3 0.4 3.1 1.2l1.4-1.4C11.3 4.7 9.7 4 8 4S4.7 4.7 3.5 5.8l1.4 1.4C5.7 6.4 6.8 6 8 6zM8 9.5c0.7 0 1.4 0.3 1.9 0.8L8 12.2 6.1 10.3C6.6 9.8 7.3 9.5 8 9.5z" fill="#fff"/></svg>
-                <svg width="16" height="8" viewBox="0 0 25 11" fill="none"><rect x="0.5" y="0.5" width="21" height="10" rx="2.5" stroke="#fff" stroke-opacity="0.5" fill="none"/><rect x="2" y="2" width="18" height="7" rx="1" fill="#fff"/><rect x="22.5" y="3.5" width="1.5" height="4" rx="0.7" fill="#fff" fill-opacity="0.5"/></svg>
-              </span>
-            </div>
-            <div class="device-slides" id="fl-slides" style="overflow:hidden">
-              <div class="device-slide active"><img src="assets/faultline_1.webp" alt="" loading="lazy"/></div>
-              <div class="device-slide"><img src="assets/faultline_2.webp" alt="" loading="lazy"/></div>
-              <div class="device-slide"><img src="assets/faultline_3.webp" alt="" loading="lazy"/></div>
-              <div class="device-slide"><img src="assets/faultline_4.webp" alt="" loading="lazy"/></div>
-              <div class="device-slide"><img src="assets/faultline_5.webp" alt="" loading="lazy"/></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h3 class="project-title" id="proj11-title">Paulo Otávio <span class="project-badge badge-demo">Portfólio</span></h3>
+      <div class="project-type">Portfólio profissional · Tecnologia · Dados · Processos</div>
+      <p class="project-desc">Portfólio profissional para apresentar a trajetória de Paulo Otávio em tecnologia, controle de qualidade, pesquisa científica, atendimento e logística. Uma narrativa visual que transforma experiências diversas em repertório prático para a entrada na área de Sistemas de Informação.</p>
+      <div class="project-tags"><span class="tag">Portfólio</span><span class="tag">Storytelling</span><span class="tag">Dados</span><span class="tag">Processos</span></div>
+      <a href="https://paulo-otavio.hatchable.site/" class="project-cta" target="_blank" rel="noopener noreferrer">Acessar portfólio ↗</a>
+      <p class="project-copyright">© Jessica Block — todos os direitos reservados.</p>
     </div>
   </article>
 
+  <!-- 12 MVG OPS -->
+  <article class="project-item reveal" aria-labelledby="proj12-title">
+    <div class="project-mockup" aria-label="Screenshot real do portfólio MVG Ops">
+      <div class="mockup-wrap"><div class="device device-portrait"><div class="device-screen">
+        <div class="device-island" aria-hidden="true"></div>
+        <div class="device-statusbar" aria-hidden="true"><span class="device-statusbar-time">9:41</span></div>
+        <div class="device-slides" id="mvg-slides"><div class="device-slide active"><img src="mvg_1.jpeg" alt="Tela real do portfólio MVG Ops" loading="lazy"/></div><div class="device-slide"><img src="mvg_2.jpeg" alt="Tela real do portfólio MVG Ops" loading="lazy"/></div><div class="device-slide"><img src="mvg_3.jpeg" alt="Tela real do portfólio MVG Ops" loading="lazy"/></div></div>
+      </div></div></div>
+    </div>
+    <div>
+      <div class="project-index" aria-hidden="true">09</div>
+      <h3 class="project-title" id="proj12-title">MVG Ops <span class="project-badge badge-corporate">Portfólio</span></h3>
+      <div class="project-type">Liderança operacional · Telecom · Alta disponibilidade</div>
+      <p class="project-desc">Portfólio executivo para Marcus Vinícius Guimarães, líder de operações em Telecom. Apresenta experiência em NOC, incidentes críticos, Service Assurance, governança operacional e comunicação executiva em ambientes de missão crítica.</p>
+      <div class="project-tags"><span class="tag">Telecom</span><span class="tag">NOC</span><span class="tag">Operações</span><span class="tag">Liderança</span><span class="tag">Alta disponibilidade</span></div>
+      <a href="https://mvgops-f8yfauyz.manus.space/" class="project-cta" target="_blank" rel="noopener noreferrer">Acessar portfólio ↗</a>
+      <p class="project-copyright">© Jessica Block — todos os direitos reservados.</p>
+    </div>
+  </article>
+
+  <!-- 13 VARANDAS -->
+  <article class="project-item reveal" aria-labelledby="proj13-title">
+    <div class="project-mockup" aria-label="Screenshots reais do site Varandas">
+      <div class="mockup-wrap"><div class="device device-portrait"><div class="device-screen">
+        <div class="device-island" aria-hidden="true"></div>
+        <div class="device-statusbar" aria-hidden="true"><span class="device-statusbar-time">9:41</span></div>
+        <div class="device-slides" id="varandas-slides">
+          <div class="device-slide active"><img src="varandas_1.jpeg" alt="Tela inicial real do Varandas, restaurante e camping na Serra da Canastra" loading="lazy"/></div>
+          <div class="device-slide"><img src="varandas_3.jpeg" alt="Tela real do site Varandas" loading="lazy"/></div>
+          <div class="device-slide"><img src="varandas_4.jpeg" alt="Tela real do site Varandas" loading="lazy"/></div>
+          <div class="device-slide"><img src="varandas_5.jpeg" alt="Tela real do site Varandas" loading="lazy"/></div>
+          <div class="device-slide"><img src="varandas_6.jpeg" alt="Tela real do site Varandas" loading="lazy"/></div>
+        </div>
+      </div></div></div>
+    </div>
+    <div>
+      <div class="project-index" aria-hidden="true">10</div>
+      <h3 class="project-title" id="proj13-title">Varandas <span class="project-badge badge-demo">Site</span></h3>
+      <div class="project-type">Gastronomia · Turismo · Experiências na Serra da Canastra</div>
+      <p class="project-desc">Site experiencial para o Varandas, restaurante e camping em Delfinópolis, Minas Gerais. Apresenta comida mineira, hospedagem, roteiros pela Serra da Canastra e eventos com uma narrativa acolhedora, visual editorial e conversão direta pelo WhatsApp.</p>
+      <div class="project-tags"><span class="tag">Restaurante</span><span class="tag">Camping</span><span class="tag">Turismo</span><span class="tag">Serra da Canastra</span><span class="tag">Eventos</span></div>
+      <a href="https://varandasrvc-ctzwm86s.manus.space/" class="project-cta" target="_blank" rel="noopener noreferrer">Acessar projeto ↗</a>
+      <p class="project-copyright">© Jessica Block — todos os direitos reservados.</p>
+    </div>
+  </article>
   </div>
 </section>
 
@@ -787,22 +978,75 @@ img,video{max-width:100%;height:auto;}
         <span class="exp-company">Projetos Independentes (J.BLK)</span>
       </div>
       <div>
-        <h3 class="exp-role">Product Manager &amp; Builder</h3>
-        <p class="exp-subtitle">Saúde Mental &amp; Neurodivergência</p>
+        <h3 class="exp-role">Designer Gráfica &amp; Product Owner</h3>
+        <p class="exp-subtitle">Concepção, design e produto de apps proprietários</p>
         <ul class="exp-bullets">
-          <li>Arquitetura e execução integral (concepção, design, produto, desenvolvimento) de 8 aplicativos: <strong>Obra Certa</strong> (SaaS B2B construção civil), <strong>Neuro Lens</strong> (triagem DSM-5 TEA/TDAH), <strong>Convergir</strong> (narrativa interativa imersiva), <strong>Oráculo Pessoal</strong> (IA generativa), <strong>BIA</strong> (acompanhamento terapêutico adolescentes), <strong>Operação Horizonte</strong> (gamificação de rotina), <strong>SensoryShield</strong> (moda inclusiva, em captação), <strong>The Fault Line</strong> (álbum conceitual web). Todas desenvolvidas com IA como ferramenta central de prototipagem e código.</li>
-          <li>Desenvolvimento autônomo de stack técnico (GitHub, Next.js, Supabase, Lovable, Manus.space, ElevenLabs, Gemini API) sem mentor prévio. IA utilizada como ferramenta integrada de aprendizado, prototipagem e desenvolvimento.</li>
-          <li>Certificação oficial em Análise do Comportamento Aplicada (Instituto Talita Rocha, 40 horas, Abr 2026) com foco em intervenção comportamental para TEA/TDAH; aplicação direta em design de BIA e Operação Horizonte.</li>
-          <li>Enfoque estratégico: Saúde mental, neurodivergência, tecnologia acessível, impacto social. Transição planejada para mestrado em Psicologia (2027).</li>
+          <li>Concepção, design, produto e desenvolvimento de projetos proprietários: <strong>Neuro Lens</strong> (triagem TEA/TDAH, gratuito), <strong>Convergir</strong> (narrativa interativa, demo gratuita), <strong>Oráculo Pessoal</strong> (entretenimento, gratuito), <strong>BIA</strong> (acompanhamento terapêutico para adolescentes neurodivergentes, demo) e <strong>Operação Horizonte</strong> (gamificação de rotina para crianças neurodivergentes, demo)</li>
+          <li>Formação como Acompanhante Terapêutica com abordagem ABA, com foco em TEA e TDAH - com orientação pontual da <strong>Talita Rocha</strong>, neuropsicóloga, especialista em ABA e TCC, e professora universitária nas faculdades UNA e UNITRI em Uberlândia</li>
+          <li>Design e produto com foco em tecnologia acessível, saúde mental, neurodivergência e impacto social</li>
         </ul>
         <div class="exp-chips">
           <span class="exp-chip">Apps com IA</span>
-          <span class="exp-chip">Produto autônomo</span>
+          <span class="exp-chip">Construção de produto</span>
           <span class="exp-chip">ABA / TEA / TDAH</span>
           <span class="exp-chip">Saúde mental</span>
           <span class="exp-chip">Wearable tech</span>
-          <span class="exp-chip">Narrativa interativa</span>
-          <span class="exp-chip">Full-Stack Development</span>
+          <span class="exp-chip">UX Writing</span>
+          <span class="exp-chip">Builder</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Crosara -->
+    <div class="exp-item reveal">
+      <div class="exp-meta">
+        <span class="exp-period">Mar 2024 - Abr 2026</span>
+        <span class="exp-company">Crosara Consultoria</span>
+      </div>
+      <div>
+        <h3 class="exp-role">Designer Gráfica / Strategic Communication</h3>
+        <p class="exp-subtitle">Comunicação visual estratégica para o agronegócio brasileiro</p>
+        <div class="exp-clients" aria-label="Empresas atendidas na Crosara">
+          <span class="exp-client mobile-hidden">ADAMA</span>
+          <span class="exp-client mobile-hidden">Agrária</span>
+          <span class="exp-client mobile-hidden">Agrex</span>
+          <span class="exp-client mobile-hidden">Agroadvance</span>
+          <span class="exp-client mobile-hidden">Andav</span>
+          <span class="exp-client">BASF</span>
+          <span class="exp-client">Bayer</span>
+          <span class="exp-client mobile-hidden">Belagrícola</span>
+          <span class="exp-client mobile-hidden">Cooperativa Holambra</span>
+          <span class="exp-client mobile-hidden">Coopercitrus</span>
+          <span class="exp-client mobile-hidden">Cooxupé</span>
+          <span class="exp-client">Corteva</span>
+          <span class="exp-client mobile-hidden">Daymsa</span>
+          <span class="exp-client mobile-hidden">J. Demito</span>
+          <span class="exp-client mobile-hidden">Koppert</span>
+          <span class="exp-client mobile-hidden">Kracht</span>
+          <span class="exp-client mobile-hidden">Lavoro</span>
+          <span class="exp-client mobile-hidden">Minasul</span>
+          <span class="exp-client mobile-hidden">Mosaic</span>
+          <span class="exp-client mobile-hidden">Ouro Fino</span>
+          <span class="exp-client mobile-hidden">Paiol</span>
+          <span class="exp-client mobile-hidden">Planfer</span>
+          <span class="exp-client mobile-hidden">Playbooks</span>
+          <span class="exp-client mobile-hidden">Prime Agro</span>
+          <span class="exp-client mobile-hidden">Risa</span>
+          <span class="exp-client mobile-hidden">Sumitomo</span>
+          <span class="exp-client mobile-hidden">Syngenta</span>
+          <span class="exp-client mobile-hidden">Volkswagen</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>+60 apresentações executivas para <strong>Big 4 do agronegócio global</strong> (Bayer, BASF, Corteva, Syngenta) e 22 empresas líderes</li>
+          <li>Comunicação visual estratégica end-to-end para consultoria especializada em mercado agrícola</li>
+          <li>Tradução de complexidade técnica em narrativas visuais impactantes para reuniões C-level</li>
+        </ul>
+        <div class="exp-chips">
+          <span class="exp-chip">Apresentações executivas</span>
+          <span class="exp-chip">Design Gráfico</span>
+          <span class="exp-chip">Diagramação</span>
+          <span class="exp-chip">PowerPoint</span>
+          <span class="exp-chip">Storytelling C-level</span>
         </div>
       </div>
     </div>
@@ -945,12 +1189,6 @@ img,video{max-width:100%;height:auto;}
 
   <div class="form-grid">
     <div>
-      <div class="section-label" style="margin-bottom:1.5rem;" aria-hidden="true">Formação</div>
-      <div class="cert-row"><span class="cert-name">Psicologia <span class="em-tag">EM BREVE</span></span></div>
-      <div class="cert-row"><span class="cert-name">Análise do Comportamento Aplicada (ABA) <span class="em-tag">EM CURSO</span></span></div>
-      <div class="cert-row"><span class="cert-name">Bacharelado em Design Gráfico — ESAMC</span></div>
-    </div>
-    <div>
       <div class="section-label" style="margin-bottom:1.5rem;" aria-hidden="true">Certificações</div>
       <div class="cert-row reveal"><span class="cert-name">Product Manager — Awari</span><span class="cert-year">2023</span></div>
       <div class="cert-row reveal"><span class="cert-name">Scrum Foundation Professional — CertiProf</span><span class="cert-year">2020</span></div>
@@ -964,8 +1202,8 @@ img,video{max-width:100%;height:auto;}
 <footer role="contentinfo">
   <span>© 2026 Jessica Block</span>
   <span>Uberlândia, MG · Brasil</span>
-  <span>Product Design · Saúde Mental · Neurodivergência</span>
-  <span style="width:100%;text-align:center;font-size:9px;opacity:.5;margin-top:.25rem;">Todos os projetos apresentados são de concepção, design e desenvolvimento executados por Jessica Block. Desenvolvidos com IA como ferramenta central de aprendizado, prototipagem e coding.</span>
+  <span>Design · Produto · Tecnologia</span>
+  <span style="width:100%;text-align:center;font-size:9px;opacity:.5;margin-top:.25rem;">Todos os projetos apresentados são de autoria e propriedade exclusiva de Jessica Block. Protegidos pelos direitos autorais nos termos da Lei 9.610/98. A reprodução total ou parcial, sem autorização expressa, é proibida.</span>
 </footer>
 
 <div class="sticky-bar" role="navigation" aria-label="Links rápidos">
@@ -976,10 +1214,6 @@ img,video{max-width:100%;height:auto;}
   <a href="https://wa.me/5534999441161" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
     <svg class="bar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"/></svg>
     <span class="bar-label">WhatsApp</span>
-  </a>
-  <a href="https://github.com/jessblock" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-    <svg class="bar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61 3.5 3.5 0 0 1 5.36-2.61c.67 1.21 1.1 2.91 1.1 4.48v2.7M7 11c1.5.5 3 1.15 4 2.5M7 11l.5-1.5M11 7l.5-1.5M7 11c-1 1-1.5 2.5-1 4M11 7c1 1 1.5 2.5 1 4"/></svg>
-    <span class="bar-label">GitHub</span>
   </a>
   <a href="https://linkedin.com/in/jessicatwblock" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
     <svg class="bar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
@@ -1004,13 +1238,17 @@ document.querySelectorAll('.reveal').forEach((el,i)=>{
 (function(){
   // Autoplay em todos os cards com múltiplos slides
   var slideSets = [
-    {id:'obracerta-slides',  ms:2400},
     {id:'neurolens-slides',  ms:2400},
     {id:'convergir-slides',  ms:2400},
     {id:'oraculo-slides',    ms:2400},
     {id:'bia-slides',        ms:2200},
     {id:'horizonte-slides',  ms:2200},
-    {id:'ss-slides',         ms:2500}
+    {id:'bp-slides',         ms:2400},
+    // Projetos novos 10–13
+    {id:'exacta-slides',     ms:2400},
+    {id:'paulo-slides',      ms:2400},
+    {id:'mvg-slides',        ms:2400},
+    {id:'varandas-slides',   ms:2400}
   ];
 
   slideSets.forEach(function(s){
@@ -1052,3 +1290,4 @@ document.querySelectorAll('.reveal').forEach((el,i)=>{
 </script>
 </body>
 </html>
+
